@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ubunchuu-truong-us.github.io/sitemap.xml
