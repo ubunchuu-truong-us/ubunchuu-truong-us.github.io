@@ -46,3 +46,7 @@ p:has(img) {
   display: flex;
   justify-content: center;
 }
+
+img[src] {
+  border-radius: 16px;
+}

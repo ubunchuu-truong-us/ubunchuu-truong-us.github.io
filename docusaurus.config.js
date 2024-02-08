@@ -72,8 +72,8 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
+          { to: '/docs/category/15-days-flying-with-tux', label: '15 Days Fly With Tux', position: 'left' },
           { to: '/blog', label: 'Blog', position: 'left' },
-          { to: '/docs/category/15-dfwt', label: '15 Days Fly With Tux', position: 'left' },
           {
             href: 'https://github.com/ubunchuu-truong-us',
             label: 'GitHub',
@@ -87,32 +87,14 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
-        links: [
-          {
-            title: 'Docs',
-            items: [
-              {
-                label: 'Tutorial',
-                to: '/docs/intro',
-              },
-            ],
-          },
-          {
-            title: 'More',
-            items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
-              {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
-              },
-            ],
-          },
-        ],
+        style: 'light',
         copyright: `Copyright © ${new Date().getFullYear()} Ubunchuu Trường Ú.`,
+        // logo: {
+        //   alt: 'Ubunchuu Logo',
+        //   src: 'img/undraw_community_linux.svg',
+        //   href: 'https://ubunchuu-truong-us.github.io',
+        //   height: 80,
+        // },
       },
       prism: {
         theme: prismThemes.github,
