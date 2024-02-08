@@ -1,0 +1,50 @@
+{
+  "name": "Ubunchuu Dev Container",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "ubunchuu-dev",
+  "initializeCommand": "${localWorkspaceFolder}/.devcontainer/scripts/initialize-command.sh",
+  "shutdownAction": "none",
+  "workspaceFolder": "/ubunchuu-truong-us",
+  "remoteUser": "${localEnv:USER}",
+  "containerUser": "${localEnv:USER}",
+  "overrideCommand": true,
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "jkearins.action-buttons-ext",
+        "eamodio.gitlens",
+        "PKief.material-icon-theme",
+        "dbaeumer.vscode-eslint",
+        "orta.vscode-jest",
+        "esbenp.prettier-vscode",
+        "streetsidesoftware.code-spell-checker"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.experimentalRestore": true,
+        "actionButtons": {
+          "reloadButton": "♻️" /* Custom reload button text */,
+          "defaultColor": "#ff0034" /* Can also use string color names */,
+          "loadNpmCommands": false /* Disables automatic generation of actions for npm commands */,
+          "commands": [
+            {
+              "cwd": "${workspaceFolder}",
+              "name": "Node Install",
+              "color": "lightgreen",
+              "command": "yarn install 2> >(grep -v warning 1>&2)"
+            },
+            {
+              "cwd": "${workspaceFolder}",
+              "name": "Development",
+              "color": "cyan",
+              "command": "yarn start"
+            }
+          ]
+        },
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "postCreateCommand": "yarn install && yarn start"
+}

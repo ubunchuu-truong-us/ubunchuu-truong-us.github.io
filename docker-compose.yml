@@ -1,0 +1,16 @@
+version: "3.7"
+services:
+  ubunchuu-dev:
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
+      args:
+        DockerUSER: ${CONTAINER_USER}
+        DockerUID: ${CONTAINER_UID}
+        DockerGID: ${CONTAINER_GID}
+    volumes:
+      - .:/ubunchuu-truong-us
+      - ${UBUNCHUU_DIR}/.ssh:/home/${CONTAINER_USER}/.ssh
+      - ${UBUNCHUU_DIR}/.gitconfig:/home/${CONTAINER_USER}/.gitconfig
+    working_dir: /ubunchuu-truong-us
+    network_mode: host
