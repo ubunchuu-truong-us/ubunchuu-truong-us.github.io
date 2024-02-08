@@ -53,9 +53,11 @@ sudo apt-get install alacritty -y
 
 Lúc này, Alacritty cơ bản đã được cài đặt thành công vào máy của bạn. Tuy nhiên, Alacritty vẫn sử dụng các config default và những thứ này hoàn toàn có thể customize lại được tùy ý theo ý thích của mình.
 
-> Bạn có thể config thành như này
+:::tip
+Bạn có thể config thành như này
+:::
 
-![image](https://hackmd.io/_uploads/SJ56YWGUa.png)
+![image](./static/day2-sample-alacritty.png)
 
 ## Tùy chỉnh Alacritty
 
@@ -142,11 +144,11 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsM
 curl -L https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip -O  JetBrainsMono.zip
 ```
 
+:::info
+Nếu không tìm được, có lẽ bạn đã chọn nhầm phiên bản release. Thử đổi về 1, 2 phiên bản cũ hơn nhé!
+:::
 
-> Nếu không tìm được, có lẽ bạn đã chọn nhầm phiên bản release. Thử đổi về 1, 2 phiên bản cũ hơn nhé!
-
-![image](https://hackmd.io/_uploads/H1evyzM8a.png)
-
+![image](./static/day2-font-jetbrains.png)
 
 2. Extract file zip vừa download về
 ```bash
@@ -170,13 +172,15 @@ fc-cache -f -v
 
 Dựa vào hướng dẫn trên, Tux tin bạn có thể tự config theo ý thích của mình, hãy dành thời gian chơi đùa với alacritty nhé!
 
-![image](https://hackmd.io/_uploads/SkZT-MGUa.png)
+![image](./static/day2-config_meme.png)
 
 Còn đây là config của Tux, bạn thấy hứng thứ có thể nghía qua nhe: https://github.com/ubunchuu-truong-us/dotfiles/blob/main/alacritty.toml
 
-> Nó sẽ trông như này
+:::info
+Nó sẽ trông như này
+:::
 
-![31 (1)](https://hackmd.io/_uploads/BkRgVzfIT.png)
+![](./static/day2-preview_terminal.png)
 
 ## Uninstall alacritty
 
@@ -196,4 +200,6 @@ Về terminal emulator sẽ có rất nhiều option khác cho mọi người l�
 
 Tuy nhiên, chúng mình sẽ không bao giờ giới thiệu và guide một cái gì không tốt cho mọi người. Khi mới bắt đầu học Linux và muốn nhập môn với bộ môn custom, tụi mình vẫn khuyên các bạn nên sử dụng **Alacritty**, đây cũng là cơ hội để chúng mình tập làm quen với việc config những cái cơ bản bằng file **YAML** (nếu bạn chưa dùng qua YAML bao giờ).
 
-> Tin chúng mình đi, sau khi thử qua tất cả Emulator thì chúng mình đã nhận ra, **Alacritty** là mượt nhất 🌻
+:::tip
+Tin chúng mình đi, sau khi thử qua tất cả Emulator thì chúng mình đã nhận ra, **Alacritty** là mượt nhất 🌻
+:::
