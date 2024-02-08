@@ -17,7 +17,6 @@ Thông qua bài viết này, Tux sẽ giúp mọi người làm quen với một
 
 > :bulb: Hãy nhớ nút mở Terminal mặc định trên Linux là Ctrl+Alt+T nhé!
 
-![](https://hackmd.io/_uploads/B1ic3C4U3.png)
 
 
 ## Các lệnh cơ bản
@@ -117,6 +116,8 @@ cat cautrucdulieu.txt # In output bên trong file trên Terminal
 
 ### 7. `cp`
 
+![](./static/day1-cp.jpg)
+
 Lệnh `cp` (copy) dùng để sao chép một file hoặc một thư mục tới một địa chỉ.
 Một số cách dùng với lệnh `cp`:
 - `cp *.py /python`: copy tất cả file có đuôi .py vào thư mục python
@@ -131,6 +132,8 @@ cp hoclinux.txt mybrain/
 
 ### 8. `mv`
 
+![](./static/day1-mv.jpg)
+
 Lệnh `mv` (move) dùng để di chuyển hoặc đổi tên một file hoặc thư mục.
 Các cách dùng lệnh mv:
 - `mv filename.txt /home/username/Documents`: di chuyển file đến địa chỉ thư mục.
@@ -142,6 +145,8 @@ mv old-ubunchuu.cpp new-ubunchuu.cpp
 ```
 
 ### 9. `rm`
+
+![](./static/day1-rm.jpg)
 
 Lệnh `rm` (remove) dùng để xóa một file hoặc thư mục.
 Các tags của lệnh `rm`:
@@ -158,6 +163,8 @@ rm -rf windows # xóa tất cả file và thư mục con của thư mục window
 
 ### 10. `grep`
 
+![](./static/day1-grep.jpg)
+
 Lệnh `grep` dùng để tìm kiếm và hiển thị các dòng trong file phù hợp với một mẫu (pattern) cụ thể.
 
 **Ví dụ:**
@@ -169,7 +176,12 @@ grep linux ubunchuu.txt # hiển thị ra những dòng có linux trong file.
 
 > Ngoài các lệnh dùng thường xuyên trên, Ubunchuu khuyến khích các bạn nên học thêm nhiều lệnh hay khác, Ubunchuu recommend cách học nhanh qua cheatsheet như: https://www.guru99.com/linux-commands-cheat-sheet.html
 
+![](./static/day1-recommend.jpg)
+
 ## Bài tập luyện tập: Ngày 1
+
+![](https://hackmd.io/_uploads/B1ic3C4U3.png)
+
 Học phải đi đôi với hành, Ubunchuu cung cấp cho các bạn một bài tập điều khiển thao tác với files và thư mục (làm quen với Terminal) của Ngày 1 trong hệ thống bài học "15 Days Flying With Tux" như sau:
 
 **Bài tập sử dụng các lệnh điều khiển Linux**
@@ -188,3 +200,5 @@ Học phải đi đôi với hành, Ubunchuu cung cấp cho các bạn một bà
 1. Tìm kiếm các dòng trong file **"new_file.txt"** chứa từ **"hello"** và hiển thị kết quả.
 
 Hãy take note lại các lệnh bạn sử dụng để thực hiện từng tác vụ trên và kết quả sau khi thực hiện vào ứng dụng take note (ví dụ: Notion) của các bạn nhé. 
+
+![](./static/day1-end.jpg)

@@ -58,20 +58,3 @@ Cấu trúc hệ điều hành Linux tóm gọn lại chỉ gồm 3 phần chín
 :::info 💡 **Ghi nhớ**
 Linux là hệ điều hành open-source, đa số các thao tác thực hiện trên linux sẽ thông qua các câu lệnh gọn gàng và nhanh trên terminal.
 :::
-
-:::warning 💡 **Ghi nhớ**
-Linux là hệ điều hành open-source, đa số các thao tác thực hiện trên linux sẽ thông qua các câu lệnh gọn gàng và nhanh trên terminal.
-:::
-
-:::danger 💡 **Ghi nhớ**
-Linux là hệ điều hành open-source, đa số các thao tác thực hiện trên linux sẽ thông qua các câu lệnh gọn gàng và nhanh trên terminal.
-:::
-
-:::success 💡 **Ghi nhớ**
-Linux là hệ điều hành open-source, đa số các thao tác thực hiện trên linux sẽ thông qua các câu lệnh gọn gàng và nhanh trên terminal.
-:::
-
-:::note 💡 **Ghi nhớ**
-Linux là hệ điều hành open-source, đa số các thao tác thực hiện trên linux sẽ thông qua các câu lệnh gọn gàng và nhanh trên terminal.
-:::
-
