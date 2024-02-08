@@ -1,17 +1,23 @@
-endi:
-  name: Endilie Yacop Sucipto
-  title: Maintainer of Docusaurus
-  url: https://github.com/endiliey
-  image_url: https://github.com/endiliey.png
+lelouvincx:
+  name: Đinh Minh Chính
+  title: Data Engineer @ KMS Healthcare
+  url: https://github.com/lelouvincx
+  image_url: https://github.com/lelouvincx.png
 
-yangshun:
-  name: Yangshun Tay
-  title: Front End Engineer @ Facebook
-  url: https://github.com/yangshun
-  image_url: https://github.com/yangshun.png
+thangbuiq:
+  name: Bùi Quang Thắng
+  title: DevOps Engineer @ Bosch
+  url: https://github.com/thangbuiq
+  image_url: https://github.com/thangbuiq.png
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
+tuantran0910:
+  name: Trần Ngọc Tuấn
+  title: Student @ HCMUS
+  url: https://github.com/tuantran0910
+  image_url: https://github.com/tuantran0910.png
+
+greyyT:
+  name: Nguyễn Trọng Nhân
+  title: Student @ HCMUS
+  url: https://github.com/greyyT
+  image_url: https://github.com/greyyT.png
