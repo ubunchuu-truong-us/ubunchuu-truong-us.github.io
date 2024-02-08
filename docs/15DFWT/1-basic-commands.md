@@ -180,7 +180,7 @@ grep linux ubunchuu.txt # hiển thị ra những dòng có linux trong file.
 
 ## Bài tập luyện tập: Ngày 1
 
-![](https://hackmd.io/_uploads/B1ic3C4U3.png)
+![](./static/day1-exercises.png)
 
 Học phải đi đôi với hành, Ubunchuu cung cấp cho các bạn một bài tập điều khiển thao tác với files và thư mục (làm quen với Terminal) của Ngày 1 trong hệ thống bài học "15 Days Flying With Tux" như sau:
 

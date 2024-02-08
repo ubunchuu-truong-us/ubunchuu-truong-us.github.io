@@ -72,7 +72,7 @@ const config = {
             position: 'left',
             label: 'Tutorial',
           },
-          { to: '/docs/category/15-days-flying-with-tux', label: '15 Days Fly With Tux', position: 'left' },
+          { to: '/docs/category/15-days-flying-with-tux', label: '15 Days Flying With Tux', position: 'left' },
           { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/ubunchuu-truong-us',
@@ -104,6 +104,10 @@ const config = {
         sidebar: {
           hideable: true,
         },
+      },
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 6
       },
     }),
 };
