@@ -105,6 +105,10 @@ const config = {
           hideable: true,
         },
       },
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 6
+      },
     }),
 };
 
