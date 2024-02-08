@@ -1,5 +1,7 @@
 # Website
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ubunchuu-truong-us/exp-ubunchuu.github.io)
+
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 ### Installation
