@@ -2,7 +2,6 @@
     "label": "Linux Overview",
     "position": 1,
     "link": {
-        "type": "generated-index",
-        "description": "Giới thiệu tổng quan về Linux."
+        "type": "generated-index"
     }
 }

@@ -1,15 +1,11 @@
 ---
 title: "Giới thiệu về Linux"
 description: "Giới thiệu về hệ điều hành Linux."
-lead: ""
-date: 2022-12-24
-lastmod: 2022-12-24
-draft: false
-menu:
-  docs:
-    parent: "Linux Overview"
-authors: ["lelouvincx"]
-weight: 101
+authors: [lelouvincx]
+tags: [Introduction]
+hide_table_of_contents: false
+date: 2022-12-01
+sidebar-position: 1
 ---
 
 Chào mừng bạn đến với bài viết đầu tiên, mở đầu tutorial của chúng mình.
