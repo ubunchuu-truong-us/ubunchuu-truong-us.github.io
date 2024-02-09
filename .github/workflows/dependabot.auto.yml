@@ -1,8 +1,5 @@
 name: Dependabot auto-merge
-on:
-  pull_request:
-    branches:
-      - 'dependabot/**'
+on: pull_request
 
 permissions:
   contents: write
@@ -11,12 +8,14 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
+    if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
     steps:
       - name: Enable auto-merge for Dependabot PRs
         run: |
           git config --global user.name "dependabot[bot]"
           git config --global user.email "dependabot[bot]@users.noreply.github.com"
-          gh pr merge --auto --merge "$PR_URL" --base main
+          gh pr merge --auto --merge "$PR_URL"
+          gh pr review --approve "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GH_TOKEN: ${{secrets.TOKEN_GITHUB}}
