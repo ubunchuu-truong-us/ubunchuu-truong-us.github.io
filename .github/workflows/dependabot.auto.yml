@@ -1,5 +1,5 @@
 name: Auto approve and merge PRs by dependabot
-on: pull_request
+on: pull_request_target
 
 jobs:
   autoapprove:
@@ -7,13 +7,13 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Auto approve
-        uses: hmarr/auto-approve-action@v3
+        uses: hmarr/auto-approve-action@v3.2.1
         if: github.actor == 'dependabot[bot]'
 
   automerge:
     name: Auto merge after successful checks
     needs: autoapprove
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: Auto merge
         uses: pascalgn/automerge-action@v0.16.2
