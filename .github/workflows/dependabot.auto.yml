@@ -10,10 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
     steps:
+      - name: Git config for actions user
+      - run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+
       - name: Enable auto-merge for Dependabot PRs
         run: |
-          git config --global user.name "dependabot[bot]"
-          git config --global user.email "dependabot[bot]@users.noreply.github.com"
           gh pr merge --auto --merge "$PR_URL"
           gh pr review --approve "$PR_URL"
         env:
