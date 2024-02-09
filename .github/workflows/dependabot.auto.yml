@@ -1,4 +1,4 @@
-name: Dependabot auto-merge
+name: Dependabot auto-approve
 on: pull_request
 
 permissions:
@@ -8,13 +8,15 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
-    if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
+    if: contains(github.event.pull_request.head.ref, 'dependabot/')
     steps:
-      - name: Enable auto-merge for Dependabot PRs
+      - name: Git config for actions user
         run: |
-          git config --global user.name "dependabot[bot]"
-          git config --global user.email "dependabot[bot]@users.noreply.github.com"
-          gh pr merge --auto --merge "$PR_URL"
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Auto Approve for Dependabot PRs
+        run: |
           gh pr review --approve "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
