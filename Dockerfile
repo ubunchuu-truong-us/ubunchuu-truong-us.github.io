@@ -23,4 +23,4 @@ USER ${DOCKERUSER}
 # Install starship for non-root user
 RUN \
   sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes -b /home/${DOCKERUSER}/.local/bin && \
-  echo 'eval "$(starship init bash && starship preset no-nerd-font -o ~/.config/starship.toml)"' >> /home/${DOCKERUSER}/.bashrc
+  echo 'eval "$(starship init bash && starship preset pure-preset -o ~/.config/starship.toml)"' >> /home/${DOCKERUSER}/.bashrc
