@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Auto approve
-        uses: hmarr/auto-approve-action@v3.2.0
+        uses: hmarr/auto-approve-action@v4.0.0
         if: github.actor == 'dependabot[bot]'
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
