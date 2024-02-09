@@ -4,22 +4,29 @@ on: pull_request_target
 jobs:
   autoapprove:
     name: Auto Approve a PR by dependabot
+    if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-22.04
     steps:
       - name: Auto approve
-        uses: hmarr/auto-approve-action@v3.2.0
-        if: github.actor == 'dependabot[bot]'
+        uses: actions/github-script@v4
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const result = await github.pulls.createReview({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            pull_number: context.issue.number,
+            event: "APPROVE"
+          })
+          console.log(result.status)
 
   automerge:
     name: Auto merge after successful checks
     needs: autoapprove
+    if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-22.04
     steps:
       - name: Auto merge
         uses: pascalgn/automerge-action@v0.16.2
-        if: github.actor == 'dependabot[bot]'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MERGE_LABELS: dependencies
