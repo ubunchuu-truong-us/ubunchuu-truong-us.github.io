@@ -4,8 +4,8 @@ FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
 ARG DOCKERUSER=vscode
 RUN \
   echo '${DOCKERUSER} ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers && \
-  mkdir -p /home/${DOCKERUSER}/.local/bin /home/${DOCKERUSER}/.config /workspace/ubunchuu-contributor && \
-  chown -R ${DOCKERUSER} /home/${DOCKERUSER}/ /workspace/ubunchuu-contributor
+  mkdir -p /home/${DOCKERUSER}/.local/bin /home/${DOCKERUSER}/.config && \
+  chown -R ${DOCKERUSER} /home/${DOCKERUSER}/
 
 # Install Node.js 18
 RUN \
@@ -19,7 +19,6 @@ RUN \
   npm install -g yarn
 
 USER ${DOCKERUSER}
-WORKDIR /workspace/ubunchuu-contributor
 
 # Install starship for non-root user
 RUN \

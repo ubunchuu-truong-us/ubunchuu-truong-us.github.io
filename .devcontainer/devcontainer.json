@@ -1,12 +1,6 @@
 {
   "name": "Ubunchuu Contributor",
-  "dockerFile": "${localWorkspaceFolder}/.devcontainer/Dockerfile",
-  "workspaceFolder": "/workspace/ubunchuu-contributor",
-  "containerUser": "vscode",
-  "mounts": [
-    "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
-    "source=${localWorkspaceFolder},target=/workspace/ubunchuu-contributor,type=bind,consistency=cached"
-  ],
+  "image": "ghcr.io/ubunchuu-truong-us/devcontainer:latest",
   "customizations": {
     "vscode": {
       "settings": {
@@ -46,6 +40,13 @@
   "postCreateCommand": "sudo chown vscode node_modules && rm -f package-lock.json || true && yarn install",
   "waitFor": "postCreateCommand",
   "postAttachCommand": "yarn start",
+  // "dockerFile": "${localWorkspaceFolder}/Dockerfile",
+  // "workspaceFolder": "/workspace/ubunchuu-contributor",
+  // "containerUser": "vscode",
+  // "mounts": [
+  //   "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
+  //   "source=./,target=/workspace/ubunchuu-contributor,type=bind,consistency=cached"
+  // ],
   "features": {
     "ghcr.io/devcontainers/features/github-cli": "latest"
   }
