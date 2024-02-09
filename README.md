@@ -1,43 +1,42 @@
-# Website
+<h1> <b>Ubunchuu Trường Ú Blog  </b></h1>
+
+[![npm version](https://badge.fury.io/js/doks.svg)](https://badge.fury.io/js/doks) [![github pages](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/gh-pages.yml) [![pages-build-deployment](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/pages/pages-build-deployment)
+
+<div style="display: flex; align-items: center;">
+  <img src="static/img/favicon.ico" width="150" alt="logo">
+  <div style="margin-left: 20px">
+    <p>Welcome to the ubunchuu-truong-us blog, built with <b>💚 and Docusaurus</b>.</p>
+  </div>
+</div>
+
+## Contributing
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ubunchuu-truong-us/exp-ubunchuu.github.io)
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+> For any UI/UX contributions, please open an issue first to discuss what you would like to change, figma if possible.
 
-### Installation
+To contribute to the blog, follow these steps:
 
-```
-$ yarn
-```
+1. Write your blog post in the `./docs/` folder on a new branch. (for example: `content/content-my-new-post`)
 
-### Local Development
-
-```
-$ yarn start
+```bash
+git checkout -b content/content-my-new-post
+cd ./docs/
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+2. Install the dependencies by running:
 
-### Build
-
-```
-$ yarn build
+```bash
+yarn install
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+3. Start the development server (will live reload with port `3000`)
 
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+```bash
+yarn start
 ```
 
-Not using SSH:
+4. Make your changes and test them locally.
+5. Open a pull request on your branch to submit your changes.
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+> **🎉 Happy blogging!**
