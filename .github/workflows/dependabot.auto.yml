@@ -19,7 +19,7 @@ jobs:
         run: |
           git config --global user.name "dependabot[bot]"
           git config --global user.email "dependabot[bot]@users.noreply.github.com"
-          gh pr merge --auto --merge "$PR_URL"
+          gh pr merge --auto --merge "$PR_URL" --base main
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GH_TOKEN: ${{secrets.TOKEN_GITHUB}}
