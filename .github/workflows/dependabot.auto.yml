@@ -1,23 +1,23 @@
-name: Dependabot auto-approve
+name: Auto approve and merge PRs by dependabot
 on: pull_request
 
-permissions:
-  contents: write
-  pull-requests: write
-
 jobs:
-  dependabot:
-    runs-on: ubuntu-latest
-    if: contains(github.event.pull_request.head.ref, 'dependabot/')
+  autoapprove:
+    name: Auto Approve a PR by dependabot
+    runs-on: ubuntu-22.04
     steps:
-      - name: Git config for actions user
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
+      - name: Auto approve
+        uses: hmarr/auto-approve-action@v3
+        if: github.actor == 'dependabot[bot]'
 
-      - name: Auto Approve for Dependabot PRs
-        run: |
-          gh pr review --approve "$PR_URL"
+  automerge:
+    name: Auto merge after successful checks
+    needs: autoapprove
+    runs-on: ubuntu-latest
+    steps:
+      - name: Auto merge
+        uses: pascalgn/automerge-action@v0.16.2
+        if: github.actor == 'dependabot[bot]'
         env:
-          PR_URL: ${{github.event.pull_request.html_url}}
-          GH_TOKEN: ${{secrets.TOKEN_GITHUB}}
+          MERGE_LABELS: dependencies
+          MERGE_METHOD: rebase
