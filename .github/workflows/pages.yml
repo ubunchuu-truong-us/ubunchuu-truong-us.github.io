@@ -3,7 +3,7 @@ name: Docusaurus Deploy
 on:
   push:
     branches:
-      - main1
+      - main
 
 permissions:
   contents: read
@@ -15,11 +15,11 @@ jobs:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           submodules: 'recursive'
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v4
         with:
           node-version: '18'
 
@@ -30,13 +30,13 @@ jobs:
         run: yarn build
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
-        
+        uses: actions/configure-pages@v4
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v3
         with:
-          path: "./build"
-          
+          path: './build'
+
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: actions/deploy-pages@v4
