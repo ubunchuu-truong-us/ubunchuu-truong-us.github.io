@@ -8,18 +8,14 @@ permissions:
 jobs:
   dependabot:
     runs-on: ubuntu-latest
-    if: ${{ github.event.pull_request.user.login }} == 'dependabot[bot]'
+    if: github.actor == 'dependabot[bot]' || github.actor == 'dependabot-preview[bot]'
     steps:
-      - name: Dependabot metadata
-        id: metadata
-        uses: dependabot/fetch-metadata@v1
-        with:
-          github-token: '${{ secrets.TOKEN_GITHUB }}'
       - name: Enable auto-merge for Dependabot PRs
         run: |
           git config --global user.name "dependabot[bot]"
           git config --global user.email "dependabot[bot]@users.noreply.github.com"
           gh pr merge --auto --merge "$PR_URL"
+          gh pr review --approve "$PR_URL"
         env:
           PR_URL: ${{github.event.pull_request.html_url}}
           GH_TOKEN: ${{secrets.TOKEN_GITHUB}}
