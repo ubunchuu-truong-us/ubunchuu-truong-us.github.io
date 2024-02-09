@@ -10,14 +10,14 @@ jobs:
       - name: Auto approve
         uses: actions/github-script@v4
         with:
-        script: |
-          const result = await github.pulls.createReview({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            pull_number: context.issue.number,
-            event: "APPROVE"
-          })
-          console.log(result.status)
+          script: |
+            const result = await github.pulls.createReview({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+              event: "APPROVE"
+            })
+            console.log(result.status)
 
   automerge:
     name: Auto merge after successful checks
