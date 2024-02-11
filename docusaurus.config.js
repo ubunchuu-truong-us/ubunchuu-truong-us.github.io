@@ -4,13 +4,14 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Ubunchuu Trường Ú',
   tagline:
-    'Một project "Lai nú" giấu tên tại trường Ú hứa hẹn giúp mọi người bước đầu tiếp cận với Linux, đặc biệt là Ubuntu cùng cách thiết lập chúng như một pro developer.',
+    'Một project "Lai nú" giấu tên tại trường Ú hứa hẹn giúp mọi người bước đầu tiếp cận với Linux, \
+    đặc biệt là Ubuntu cùng cách thiết lập chúng như một pro developer.',
   favicon: 'img/favicon.ico',
 
   staticDirectories: ['static'],
@@ -79,7 +80,7 @@ const config = {
             label: '15 Days Flying With Tux',
             position: 'left',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/ubunchuu-truong-us',
             label: 'GitHub',
