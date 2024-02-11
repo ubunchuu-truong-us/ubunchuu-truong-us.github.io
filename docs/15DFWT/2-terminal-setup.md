@@ -9,6 +9,8 @@ date: 2024-01-04
 sidebar-position: 3
 ---
 
+![](./static/day2-cover.png)
+
 Trong bài viết này, chúng ta sẽ học cách cài đặt và tùy chỉnh terminal trên Ubuntu. Terminal là một phần quan trọng trong quá trình làm việc với Linux. Chúng ta sẽ sử dụng **Alacritty** làm terminal emulator.
 
 ![](static/day2-alacritty.png)

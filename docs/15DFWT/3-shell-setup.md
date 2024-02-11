@@ -9,7 +9,7 @@ date: 2024-01-30
 sidebar-position: 4
 ---
 
-![](./static/day3-install_zsh.png)
+![](./static/day3-cover.png)
 
 Đối với Ubuntu và đa số các distro của Linux khác, shell (có thể hiểu đơn giản là công cụ giúp ta giao tiếp với Linux bằng câu lệnh - commandline) **mặc định sẽ là Bash Shell** (có người còn hay gọi vui là *"shell đồng tiền"*, vì nó có ký hiệu `$` ở đầu câu lệnh).
 
