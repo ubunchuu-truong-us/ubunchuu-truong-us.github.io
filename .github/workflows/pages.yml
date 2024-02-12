@@ -15,9 +15,9 @@ jobs:
     name: Format Markdown files
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v2
         with:
-          submodules: 'recursive'
+          fetch-depth: 0
 
       - name: Auto-Formatter
         uses: mezgoodle/auto-formatter@v1.0.2
