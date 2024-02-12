@@ -50,3 +50,11 @@ p:has(img) {
 img[src] {
   border-radius: 16px;
 }
+
+div[class^='announcementBar_'] {
+  color: #3e3085;
+  font-weight: 700;
+  background-color: #8ec5fc;
+  background-image: linear-gradient(65deg, #8ec5fc 0%, #e0c3fc 100%);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}

@@ -8,6 +8,9 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  color: #1d2d35;
+  background: none;
+  /* Uncomment the background line if any background modified in hero banner */
 }
 
 html[data-theme='dark'] .heroBanner {
