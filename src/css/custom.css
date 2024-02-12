@@ -42,6 +42,14 @@ code span {
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
+/* Default class */
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Center image and border radius */
 p:has(img) {
   display: flex;
   justify-content: center;
@@ -51,6 +59,7 @@ img[src] {
   border-radius: 16px;
 }
 
+/* Announcement bar */
 div[class^='announcementBar_'] {
   color: #3e3085;
   font-weight: 700;
@@ -59,6 +68,7 @@ div[class^='announcementBar_'] {
   transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+/* Smaller navbar center css */
 .navbar {
   display: flex;
   justify-content: center;
@@ -69,26 +79,119 @@ div[class^='announcementBar_'] {
   max-width: 100%;
 }
 
-.header-github-link:hover {
-  transform: scale(1.1);
-  transition: all 0.15s ease-out;
-  filter: invert(21%) sepia(52%) saturate(1895%) hue-rotate(248deg) brightness(91%) contrast(93%);
+/* Theme switcher on pc margin css */
+.navbar__items > div {
+  margin-inline: 10px;
 }
 
-.header-github-link:before {
+/* Navbar right side icons */
+.header-github-link {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  padding-inline: 24px;
+  text-indent: -9999px; 
+  white-space: nowrap;
+}
+
+.header-github-link:hover {
+  transition: all 0.15s ease-out;
+  opacity: 0.7;
+}
+
+.header-github-link:hover::after {
+  transition: all 0.15s ease-out;
+  opacity: 0.4;
+}
+
+.header-github-link::after {
+  content: '';
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+}
+
+.header-github-link::before {
   background: url('https://raw.githubusercontent.com/ubunchuu-truong-us/exp-ubunchuu.github.io/main/static/img/github.svg') no-repeat;
   content: '';
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
   display: flex;
   height: 24px;
   width: 24px;
+  opacity: 1;
+  z-index: 10;
 }
 
-.btn-primary {
-  background-color: #5d2f86;
-  color: white !important;
+html[data-theme="dark"] .header-github-link:before {
+  filter: invert(99%) sepia(2%) saturate(886%) hue-rotate(307deg) brightness(117%) contrast(100%);
 }
 
-.container {
+.header-facebook-link {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  padding-inline: 24px;
+  text-indent: -9999px; 
+  white-space: nowrap;
+}
+
+.header-facebook-link:hover {
+  transition: all 0.15s ease-out;
+  opacity: 0.7;
+}
+
+.header-facebook-link:hover::after {
+  transition: all 0.15s ease-out;
+  opacity: 0.4;
+}
+
+.header-facebook-link::after {
+  content: '';
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  border-radius: 50%;
+  background-color: #d8d8d8;
+}
+
+.header-facebook-link::before {
+  background: url('https://raw.githubusercontent.com/ubunchuu-truong-us/exp-ubunchuu.github.io/main/static/img/facebook.svg') no-repeat;
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  display: flex;
+  height: 24px;
+  width: 24px;
+  opacity: 1;
+  z-index: 10;
+}
+
+html[data-theme="dark"] .header-facebook-link:before {
+  filter: invert(99%) sepia(2%) saturate(886%) hue-rotate(307deg) brightness(117%) contrast(100%);
+}
+
+/* Hero title */
+.hero__title {
+  font-size: 56px;
+}
+
+/* Hero subtitle smaller width */
+.hero > .container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,22 +200,61 @@ div[class^='announcementBar_'] {
 .hero__subtitle {
   font-size: 1.25rem;
   line-height: 1.5;
-  width: 65%;
+  width: 660px;
 }
 
-.center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Hero button */
+.btn-primary {
+  background-color: #5d2f86;
+  color: white !important;
+  padding: 12px 32px;
+  border-radius: 10px;
+}
+
+.hero > .container a {
+  border: none;
 }
 
 @media only screen and (max-width: 996px) {
+  /* Subtitle Responsive */
   .hero__subtitle {
     width: 100%;
   }
 
+  /* Feature Items Responsive */
   .feature-item {
     width: 75%;
     margin-top: 24px;
+  }
+
+  /* On mobile device, display the text, otherwise display icon */
+  .header-github-link {
+    width: 100%;
+    text-indent: 0;
+    padding: 6px 12px;
+    height: 100%;
+  }
+
+  .header-github-link::before {
+    display: none;
+  }
+
+  .header-github-link::after {
+    display: none;
+  }
+
+  .header-facebook-link {
+    width: 100%;
+    text-indent: 0;
+    padding: 6px 12px;
+    height: 100%;
+  }
+
+  .header-facebook-link::before {
+    display: none;
+  }
+
+  .header-facebook-link::after {
+    display: none;
   }
 }

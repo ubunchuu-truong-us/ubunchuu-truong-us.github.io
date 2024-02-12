@@ -85,12 +85,15 @@ const config = {
             href: "https://github.com/ubunchuu-truong-us",
             position: "right",
             className: "header-github-link",
-            "aria-label": "GitHub repository"
+            "aria-label": "GitHub repository",
+            label: 'Github'
           },
           {
-            href: 'https://www.facebook.com/ubunchuu.club.hcmus',
+            href: "https://www.facebook.com/ubunchuu.club.hcmus",
+            position: "right",
+            className: "header-facebook-link",
+            "aria-label": "Facebook repository",
             label: 'Facebook',
-            position: 'right',
           },
         ],
       },
