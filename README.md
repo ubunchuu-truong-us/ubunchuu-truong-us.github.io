@@ -30,7 +30,7 @@ cd ./docs/
 yarn install
 ```
 
-3. Start the development server (will live reload with port `3000`)
+3. Start the development server (will live reload on port `3000`)
 
 ```bash
 yarn start
