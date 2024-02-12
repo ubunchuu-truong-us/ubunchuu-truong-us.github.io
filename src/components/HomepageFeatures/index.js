@@ -14,25 +14,54 @@ const FeatureList = [
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Hiệu quả 🍀',
 
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Ubunchuu Trường Ú cung cấp cho bạn hệ thống tutorial được đầy đủ, chuẩn hóa
+        và đồng bộ để bạn có thể cài đặt và sử dụng.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Cài đặt mượt mà ✨',
 
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Bằng việc follow hướng dẫn của chúng mình, bạn sẽ có thể cài đặt và sử dụng
+        ubuntu một cách dễ dàng.
       </>
     ),
   },
+  {
+    title: 'Đa dạng 🎉',
+
+    description: (
+      <>
+        Có nhiều dự án để bạn khám phá như "15 Days Flying With Tux", manga "Ubunchuu",
+        config giao diện, terminal, etc.
+      </>
+    )
+  },
+  {
+    title: 'Tìm kiếm 🔎',
+
+    description: (
+      <>
+        Tìm kiếm từ khóa dễ dàng với công cụ tìm kiếm được build sẵn trong trang.
+      </>
+    )
+  },
+  {
+    title: 'Dark mode 🌗',
+
+    description: (
+      <>
+        Bạn có thể đổi light/dark mode bằng cách nhấn vào biểu tượng mặt trăng ở
+        góc trên bên phải.
+      </>
+    )
+  }
 ];
 
 function Feature({ Image, title, description }) {
@@ -42,9 +71,11 @@ function Feature({ Image, title, description }) {
       <div className="text--center">
         {/* <Svg className={styles.featureSvg} role="img" /> */}
       </div>
-      <div className="text--center padding-horiz--md">
-        <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+      <div className="center">
+        <div className="text--center padding-horiz--md feature-item">
+          <Heading as="h2">{title}</Heading>
+          <p>{description}</p>
+        </div>
       </div>
     </div>
   );

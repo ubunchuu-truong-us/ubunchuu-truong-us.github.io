@@ -15,12 +15,14 @@
               "cwd": "${workspaceFolder}",
               "name": "Node Install",
               "color": "green",
+              "singleInstance": true,
               "command": "yarn install 2> >(grep -v warning 1>&2)"
             },
             {
               "cwd": "${workspaceFolder}",
               "name": "Development",
               "color": "cyan",
+              "singleInstance": true,
               "command": "yarn start"
             }
           ]
@@ -31,22 +33,14 @@
       "extensions": [
         "jkearins.action-buttons-ext",
         "eamodio.gitlens",
-        "orta.vscode-jest",
         "esbenp.prettier-vscode"
       ]
     }
   },
   "forwardPorts": [3000],
-  "postCreateCommand": "sudo chown vscode node_modules && rm -f package-lock.json || true && yarn install",
+  "postCreateCommand": "yarn install",
   "waitFor": "postCreateCommand",
   "postAttachCommand": "yarn start",
-  // "dockerFile": "${localWorkspaceFolder}/Dockerfile",
-  // "workspaceFolder": "/workspace/ubunchuu-contributor",
-  // "containerUser": "vscode",
-  // "mounts": [
-  //   "source=${localWorkspaceFolderBasename}-node_modules,target=${containerWorkspaceFolder}/node_modules,type=volume",
-  //   "source=./,target=/workspace/ubunchuu-contributor,type=bind,consistency=cached"
-  // ],
   "features": {
     "ghcr.io/devcontainers/features/github-cli": "latest"
   }
