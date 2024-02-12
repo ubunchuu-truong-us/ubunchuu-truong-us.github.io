@@ -1,6 +1,6 @@
 <h1> <b>Ubunchuu Trường Ú Blog  </b></h1>
 
-[![npm version](https://badge.fury.io/js/doks.svg)](https://badge.fury.io/js/doks) [![github pages](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/gh-pages.yml/badge.svg)](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/gh-pages.yml) [![pages-build-deployment](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/pages/pages-build-deployment)
+![Docusaurus Badge](https://img.shields.io/badge/docusaurus-3.1.1-green) [![github pages](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/pages.yml) [![Create and publish a Docker image](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/codespaces-image.yml/badge.svg?branch=main)](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/codespaces-image.yml)
 
 <div style="display: flex; align-items: center;">
   <img src="static/img/favicon.ico" width="150" alt="logo">
@@ -11,7 +11,7 @@
 
 ## Contributing
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ubunchuu-truong-us/exp-ubunchuu.github.io)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/ubunchuu-truong-us/ubunchuu-truong-us.github.io)
 
 > For any UI/UX contributions, please open an issue first to discuss what you would like to change, figma if possible.
 

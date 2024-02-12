@@ -90,7 +90,7 @@ div[class^='announcementBar_'] {
   width: 24px;
   height: 24px;
   padding-inline: 24px;
-  text-indent: -9999px; 
+  text-indent: -9999px;
   white-space: nowrap;
 }
 
@@ -118,7 +118,8 @@ div[class^='announcementBar_'] {
 }
 
 .header-github-link::before {
-  background: url('https://raw.githubusercontent.com/ubunchuu-truong-us/exp-ubunchuu.github.io/main/static/img/github.svg') no-repeat;
+  background: url('https://raw.githubusercontent.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/main/static/img/github.svg')
+    no-repeat;
   content: '';
   position: absolute;
   left: 50%;
@@ -131,8 +132,9 @@ div[class^='announcementBar_'] {
   z-index: 10;
 }
 
-html[data-theme="dark"] .header-github-link:before {
-  filter: invert(99%) sepia(2%) saturate(886%) hue-rotate(307deg) brightness(117%) contrast(100%);
+html[data-theme='dark'] .header-github-link:before {
+  filter: invert(99%) sepia(2%) saturate(886%) hue-rotate(307deg)
+    brightness(117%) contrast(100%);
 }
 
 .header-facebook-link {
@@ -140,7 +142,7 @@ html[data-theme="dark"] .header-github-link:before {
   width: 24px;
   height: 24px;
   padding-inline: 24px;
-  text-indent: -9999px; 
+  text-indent: -9999px;
   white-space: nowrap;
 }
 
@@ -168,7 +170,8 @@ html[data-theme="dark"] .header-github-link:before {
 }
 
 .header-facebook-link::before {
-  background: url('https://raw.githubusercontent.com/ubunchuu-truong-us/exp-ubunchuu.github.io/main/static/img/facebook.svg') no-repeat;
+  background: url('https://raw.githubusercontent.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/main/static/img/facebook.svg')
+    no-repeat;
   content: '';
   position: absolute;
   left: 50%;
@@ -181,8 +184,9 @@ html[data-theme="dark"] .header-github-link:before {
   z-index: 10;
 }
 
-html[data-theme="dark"] .header-facebook-link:before {
-  filter: invert(99%) sepia(2%) saturate(886%) hue-rotate(307deg) brightness(117%) contrast(100%);
+html[data-theme='dark'] .header-facebook-link:before {
+  filter: invert(99%) sepia(2%) saturate(886%) hue-rotate(307deg)
+    brightness(117%) contrast(100%);
 }
 
 /* Hero title */
