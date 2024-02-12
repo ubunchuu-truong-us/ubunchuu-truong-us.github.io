@@ -58,3 +58,49 @@ div[class^='announcementBar_'] {
   background-image: linear-gradient(65deg, #8ec5fc 0%, #e0c3fc 100%);
   transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
+
+.header-github-link:hover {
+  opacity: 0.6;
+}
+
+.header-github-link:before {
+  background: url('') no-repeat;
+  content: '';
+  display: flex;
+  height: 24px;
+  width: 24px;
+}
+
+.btn-primary {
+  background-color: #5d2f86;
+  color: white !important;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__subtitle {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  width: 65%;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 996px) {
+  .hero__subtitle {
+    width: 100%;
+  }
+
+  .feature-item {
+    width: 75%;
+    margin-top: 24px;
+  }
+}

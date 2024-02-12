@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -80,11 +80,12 @@ const config = {
             label: '15 Days Flying With Tux',
             position: 'left',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          { to: '/blog', label: 'Blog', position: 'left' },
           {
-            href: 'https://github.com/ubunchuu-truong-us',
-            label: 'GitHub',
-            position: 'right',
+            href: "https://github.com/ubunchuu-truong-us",
+            position: "right",
+            className: "header-github-link",
+            "aria-label": "GitHub repository"
           },
           {
             href: 'https://www.facebook.com/ubunchuu.club.hcmus',
