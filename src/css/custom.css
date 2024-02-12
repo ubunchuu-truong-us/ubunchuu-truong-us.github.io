@@ -59,12 +59,24 @@ div[class^='announcementBar_'] {
   transition: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.navbar {
+  display: flex;
+  justify-content: center;
+}
+
+.navbar__inner {
+  width: 1440px;
+  max-width: 100%;
+}
+
 .header-github-link:hover {
-  opacity: 0.6;
+  transform: scale(1.1);
+  transition: all 0.15s ease-out;
+  filter: invert(21%) sepia(52%) saturate(1895%) hue-rotate(248deg) brightness(91%) contrast(93%);
 }
 
 .header-github-link:before {
-  background: url('') no-repeat;
+  background: url('https://raw.githubusercontent.com/ubunchuu-truong-us/exp-ubunchuu.github.io/main/static/img/github.svg') no-repeat;
   content: '';
   display: flex;
   height: 24px;
