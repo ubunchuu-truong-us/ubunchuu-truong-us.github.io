@@ -1,5 +1,5 @@
 ---
-title: Day 4 - Git
+title: Day 4 - Git cơ bản
 description: Git cơ bản
 slug: basic-git
 authors: [tuantran0910, greyyT]
@@ -384,7 +384,7 @@ Go
 ```
 
 8. Hãy kiểm tra và phân tích trạng thái của Repo. Sau đó hãy tạo commit cho **TỪNG** thay đổi với nội dung commit tùy ý.
-9. Xóa `Visual Studio` trong file \*\*`IDEs`. Đồng thời, thêm vào file đó nội dung sau:
+9. Xóa `Visual Studio` trong file **`IDEs`**. Đồng thời, thêm vào file đó nội dung sau:
 
 ```text
 Vim

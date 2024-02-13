@@ -1,33 +1,39 @@
 name: Auto approve and merge PRs by dependabot
-on: pull_request_target
+on:
+  pull_request:
+    branches: [main]
+    types: [opened, edited, reopened, synchronize]
 
 jobs:
-  autoapprove:
-    name: Auto Approve a PR by dependabot
+  autoapprovemerge:
+    name: Auto Approve and Merge PR
     if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-22.04
+    permissions:
+      pull-requests: write
     steps:
-      - name: Auto approve
-        uses: actions/github-script@v7
-        with:
-          script: |
-            const result = await github.pulls.createReview({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: context.issue.number,
-              event: "APPROVE"
-            })
-            console.log(result.status)
+      - uses: actions/checkout@v4
 
-  automerge:
-    name: Auto merge after successful checks
-    needs: autoapprove
-    if: github.actor == 'dependabot[bot]'
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Auto merge
-        uses: pascalgn/automerge-action@v0.16.2
+      - name: Auto approve
+        run: |
+          git config --global user.name "${USER_NAME}"
+          git config --global user.email "${USER_EMAIL}"
+          git config --global credential.helper '!f() { git -c credential.helper=store --push; }; f'
+          gh pr review ${{ github.event.pull_request.number }} --approve --body "${APPROVE_TEXT}"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          MERGE_LABELS: dependencies
-          MERGE_METHOD: rebase
+          GH_TOKEN: ${{ secrets.TOKEN_GITHUB }}
+          USER_NAME: ubunchuu[bot]
+          USER_EMAIL: 159746302+ubunchuu-admin@users.noreply.github.com
+          APPROVE_TEXT: Legit to bot ✅
+
+      - name: Auto merge
+        run: |
+          git config --global user.name "${USER_NAME}"
+          git config --global user.email "${USER_EMAIL}"
+          curl -X PUT \
+          -H "Authorization: Bearer ${{ secrets.TOKEN_GITHUB }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/merge?merge_method=merge"
+        env:
+          USER_NAME: ubunchuu[bot]
+          USER_EMAIL: 159746302+ubunchuu-admin@users.noreply.github.com

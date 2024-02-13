@@ -4,7 +4,7 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import { themes as prismThemes } from 'prism-react-renderer';
+import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -80,19 +80,19 @@ const config = {
             label: '15 Days Flying With Tux',
             position: 'left',
           },
-          { to: '/blog', label: 'Blog', position: 'left' },
+          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: "https://github.com/ubunchuu-truong-us",
-            position: "right",
-            className: "header-github-link",
-            "aria-label": "GitHub repository",
-            label: 'Github'
+            href: 'https://github.com/ubunchuu-truong-us',
+            position: 'right',
+            className: 'header-github-link',
+            'aria-label': 'GitHub repository',
+            label: 'Github',
           },
           {
-            href: "https://www.facebook.com/ubunchuu.club.hcmus",
-            position: "right",
-            className: "header-facebook-link",
-            "aria-label": "Facebook repository",
+            href: 'https://www.facebook.com/ubunchuu.club.hcmus',
+            position: 'right',
+            className: 'header-facebook-link',
+            'aria-label': 'Facebook repository',
             label: 'Facebook',
           },
         ],
@@ -113,7 +113,7 @@ const config = {
       },
       docs: {
         sidebar: {
-          hideable: true,
+          hideable: false,
         },
       },
       tableOfContents: {
@@ -124,7 +124,7 @@ const config = {
         id: 'support_us',
         content:
           'Contribute the content on <a target="_blank" rel="noopener noreferrer" href="https://github.com/ubunchuu-truong-us/exp-ubunchuu.github.io">GitHub Codespaces</a> 🚀',
-        isCloseable: true,
+        isCloseable: false,
       },
     }),
 };
