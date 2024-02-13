@@ -1,0 +1,28 @@
+# You can refer README of this repo for future mantainances: https://github.com/actions/labeler
+
+source:
+  - all:
+      - changed-files:
+          - any-glob-to-any-file: 'src/**/*'
+          - all-globs-to-all-files: '!src/docs/*'
+
+content-documentation:
+  - changed-files:
+      - any-glob-to-any-file:
+          - docs/**/*
+
+content-blog:
+  - changed-files:
+      - any-glob-to-any-file:
+          - blog/**/*
+
+devops-maintain:
+  - changed-files:
+      - any-glob-to-any-file:
+          - .github/**/*
+          - .devcontainer/**/*
+
+docker:
+  - changed-files:
+      - any-glob-to-any-file:
+          - Dockerfile
