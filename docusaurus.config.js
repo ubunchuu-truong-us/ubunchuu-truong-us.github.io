@@ -62,6 +62,15 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      // Search app config
+      // MUST CHANGE LATER, CURRENT CONFIG IS THANGBUIQ'S CONFIG
+      algolia: {
+        appId: 'ZFO7GSYT5V',
+        apiKey: '55db49c58af677cb4bce162a4932ca42',
+        indexName: 'docusaurus-2',
+        placeholder: 'Search',
+        contextualSearch: true,
+      },
       navbar: {
         title: 'Ubunchuu Trường Ú',
         logo: {
@@ -123,7 +132,7 @@ const config = {
       announcementBar: {
         id: 'support_us',
         content:
-          'Contribute the content on <a target="_blank" rel="noopener noreferrer" href="https://github.com/ubunchuu-truong-us/exp-ubunchuu.github.io">GitHub Codespaces</a> 🚀',
+          'Contribute the content on <a target="_blank" rel="noopener noreferrer" href="https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io">GitHub Codespaces</a> 🚀',
         isCloseable: false,
       },
     }),

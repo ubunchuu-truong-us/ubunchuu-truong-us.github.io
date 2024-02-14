@@ -4,12 +4,12 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
-import '../css/custom.css'
+import '../css/custom.css';
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
 
 function HomepageHeader() {
-  const { siteConfig } = useDocusaurusContext();
+  const {siteConfig} = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--primary', styles.heroBanner)}>
       <div className="container">
@@ -30,11 +30,11 @@ function HomepageHeader() {
 }
 
 export default function Home() {
-  const { siteConfig } = useDocusaurusContext();
+  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
+      title={null}
+      description="Một project 'Lai nú' giấu tên tại trường Ú hứa hẹn giúp mọi người bước đầu tiếp cận với Linux, đặc biệt là Ubuntu cùng cách thiết lập chúng như một pro developer.">
       <HomepageHeader />
       <main>
         <HomepageFeatures />

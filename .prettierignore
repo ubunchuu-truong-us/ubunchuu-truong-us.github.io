@@ -4,7 +4,7 @@ node_modules
 build
 coverage
 .docusaurus
-
+**/*.md
 jest/vendor
 
 packages/lqip-loader/lib/

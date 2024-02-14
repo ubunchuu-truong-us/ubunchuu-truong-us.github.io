@@ -1,5 +1,5 @@
 {
-  "name": "exp-ubunchuu-github-io",
+  "name": "ubunchuu-truong-us.github.io",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -16,6 +16,7 @@
   "dependencies": {
     "@docusaurus/core": "3.1.1",
     "@docusaurus/preset-classic": "3.1.1",
+    "@docusaurus/theme-search-algolia": "^3.1.1",
     "@mdx-js/react": "^3.0.1",
     "clsx": "^2.0.0",
     "prism-react-renderer": "^2.3.0",
