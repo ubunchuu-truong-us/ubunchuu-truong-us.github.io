@@ -26,10 +26,14 @@ jobs:
           node-version: '18'
 
       - name: Install Dependencies
-        run: yarn install --frozen-lockfile
+        run: |
+          echo "before_time=$(date +%s)" >> $GITHUB_ENV
+          yarn install --frozen-lockfile
 
       - name: Build Website
-        run: yarn build
+        run: |
+          yarn build
+          echo "after_time=$(date +%s)" >> $GITHUB_ENV
 
       - name: Verify Build Output
         run: |
@@ -50,12 +54,13 @@ jobs:
         if: github.event_name == 'pull_request'
         uses: actions/github-script@v7
         with:
+          github-token: ${{ secrets.TOKEN_GITHUB }}
           script: |
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'Test server functionality passed ✅'
+              body: 'Test server functionality passed ✅ with total CI time: ' + (process.env.after_time - process.env.before_time) + ' seconds'
             });
 
   deploy-docusaurus:
