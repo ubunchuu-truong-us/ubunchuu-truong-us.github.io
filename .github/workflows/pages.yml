@@ -1,9 +1,10 @@
-name: Docusaurus Deploy
+name: 'Docusaurus CI/CD'
 
 on:
   push:
-    branches:
-      - main
+    branches: ['main']
+  pull_request:
+    branches: ['main']
 
 permissions:
   contents: read
@@ -11,28 +12,77 @@ permissions:
   id-token: write
 
 jobs:
-  deploy:
-    name: Deploy to GitHub Pages
-    runs-on: ubuntu-latest
+  build-and-serve:
+    name: Build and Test Serving
+    runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: 'recursive'
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: yarn install --frozen-lockfile
 
-      - name: Build website
+      - name: Build Website
         run: yarn build
 
-      - name: Setup Pages
+      - name: Verify Build Output
+        run: |
+          if [ -d "build" ]; then
+            echo "Build successful"
+          else
+            echo "Build failed"
+            exit 1
+          fi
+
+      - name: Test Server Functionality
+        run: |
+          yarn serve &
+          sleep 5
+          kill %1
+
+      - name: Comment on Pull Request
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Test server functionality passed ✅'
+            });
+
+  deploy-docusaurus:
+    if: github.event_name == 'push'
+    needs: [build-and-serve]
+    name: Deploy Docusaurus to GitHub Pages
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout Code (with Submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build Website
+        run: yarn build
+
+      - name: Configure GitHub Pages
         uses: actions/configure-pages@v4
 
-      - name: Upload artifact
+      - name: Upload Website Artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './build'

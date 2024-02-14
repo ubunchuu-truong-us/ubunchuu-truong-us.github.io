@@ -4,7 +4,7 @@ source:
   - all:
       - changed-files:
           - any-glob-to-any-file: 'src/**/*'
-          - all-globs-to-all-files: '!src/docs/*'
+          - all-globs-to-all-files: '!docs/*'
 
 content-documentation:
   - changed-files:
