@@ -1,0 +1,13 @@
+name: 'PR Assigner'
+on:
+  pull_request:
+    types: [opened, ready_for_review]
+
+jobs:
+  add-reviews:
+    name: Auto
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: kentaro-m/auto-assign-action@v2.0.0
+        with:
+          configuration-path: '.github/assign.yml'

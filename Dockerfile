@@ -24,4 +24,6 @@ USER ${DOCKERUSER}
 # Install starship for non-root user with pure prompt
 RUN \
   sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes -b /home/${DOCKERUSER}/.local/bin && \
-  echo 'eval "$(starship init bash && starship preset pure-preset -o ~/.config/starship.toml)"' >> /home/${DOCKERUSER}/.bashrc
+  echo 'starship preset pure-preset -o ~/.config/starship.toml' >> /home/${DOCKERUSER}/.bashrc && \
+  echo 'eval "$(starship init bash)"' >> /home/${DOCKERUSER}/.bashrc
+  
