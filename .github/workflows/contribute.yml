@@ -24,4 +24,5 @@ jobs:
         with:
           token: ${{ secrets.TOKEN_GITHUB }}
           branch: ${{ github.ref }}
+          base: main
           body-path: .github/pull_request_template.md
