@@ -1,4 +1,4 @@
-## 🐧 Ubunchuu Contribute Request
+# 🐧 Ubunchuu Contribute Request
 
 <!--
 Please do not leave this blank

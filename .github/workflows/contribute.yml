@@ -1,0 +1,26 @@
+name: Create Contribute Pull Request
+on: create
+
+jobs:
+  create_pull_request:
+    if: ${{ contains(github.ref, 'refs/heads/content/') }}
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Dummy commit to this branch
+        run: |
+          git checkout -b ${{ github.ref }}
+          git config --global user.name "ubunchuu[bot]"
+          git config --global user.email "159746302+ubunchuu-admin@users.noreply.github.com"
+          git commit --allow-empty -m "ci: initial commit by bot"
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.TOKEN_GITHUB }}
+          branch: ${{ github.ref }}
+          body-path: .github/pull_request_template.md
