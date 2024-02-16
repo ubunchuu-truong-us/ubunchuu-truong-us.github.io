@@ -21,8 +21,21 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Check markdown files
-        uses: avto-dev/markdown-lint@v1
+      - uses: DavidAnson/markdownlint-cli2-action@v15
         with:
-          args: '**/*.md'
-          ignore: ./README.md
+          config: '.markdownlint.json'
+          globs: '**/*.md'
+          continue-on-error: true
+
+      - name: Comment on Pull Request
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.TOKEN_GITHUB }}
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: ${{ steps.markdown.outputs.summary }}
+            })
