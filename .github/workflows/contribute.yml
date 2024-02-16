@@ -1,5 +1,9 @@
 name: Create Contribute Pull Request
 on: create
+permissions:
+  contents: write
+  pull-requests: write
+  id-token: write
 
 jobs:
   create_pull_request:
