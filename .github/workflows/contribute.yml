@@ -29,7 +29,6 @@ jobs:
       - name: Open PR
         id: open_pr
         run: |
-          gh_pr_up() { gh pr create $* || gh pr edit $* }
-          gh_pr_up --title "[AUTOMATIC] Contribute: ${{ env.branch }}" --body $(cat .github/PULL_REQUEST_TEMPLATE.md)
+          gh pr create --title "[AUTOMATIC] Contribute: ${{ env.branch }}" --body-file .github/pull_request_template.md
         env:
           GH_TOKEN: ${{ secrets.TOKEN_GITHUB }}
