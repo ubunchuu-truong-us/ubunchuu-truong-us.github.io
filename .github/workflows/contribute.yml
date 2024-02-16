@@ -11,18 +11,21 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
+      - name: Output Branch Name remove the refs/heads/
+        run: echo "branch=${GITHUB_REF#refs/heads/}" >> $GITHUB_ENV
+
       - name: Initial commit to branch by bot
         run: |
-          git checkout -b ${{ github.ref }}
+          git checkout -b ${{ env.branch }}
           git config --global user.name "ubunchuu[bot]"
           git config --global user.email "159746302+ubunchuu-admin@users.noreply.github.com"
           git commit --allow-empty -m "ci: initial commit by bot"
-          git push origin ${{ github.ref }}
+          git push -u origin ${{ env.branch }}
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.TOKEN_GITHUB }}
-          branch: ${{ github.ref }}
+          branch: ${{ env.branch }}
           base: main
           body-path: .github/pull_request_template.md
