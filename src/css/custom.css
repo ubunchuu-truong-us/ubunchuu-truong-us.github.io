@@ -7,27 +7,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
-*,
-html,
-body {
-  font-family: 'Inter', sans-serif !important;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Inter', sans-serif !important;
-}
-
-code span {
-  font-family: 'JetBrains Mono', monospace;
-}
+/* code span {
+  font-family: 'JetBrains Mono', monospace !important;
+} */
 
 /* You can override the default Infima variables here. */
 :root {
+  /* Font config */
+  --ifm-font-family-monospace: 'JetBrains Mono', monospace;
+  --ifm-font-family-base: 'Inter', sans-serif;
+  --ifm-heading-font-family: 'Inter', sans-serif;
+  /* Color config */
   --ifm-color-primary: #5946bc;
   --ifm-color-primary-dark: #4f3eaa;
   --ifm-color-primary-darker: #4b3aa1;
