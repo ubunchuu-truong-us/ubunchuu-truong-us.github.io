@@ -26,6 +26,4 @@ jobs:
         uses: peter-evans/create-pull-request@v6
         with:
           token: ${{ secrets.TOKEN_GITHUB }}
-          branch: ${{ env.branch }}
-          base: main
           body-path: .github/pull_request_template.md
