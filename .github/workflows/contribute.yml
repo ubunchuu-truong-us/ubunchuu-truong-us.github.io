@@ -26,8 +26,10 @@ jobs:
           git commit --allow-empty -m "ci: initial commit by bot"
           git push origin ${{ env.branch }}
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          token: ${{ secrets.TOKEN_GITHUB }}
-          body-path: .github/pull_request_template.md
+      - name: Open PR
+        id: open_pr
+        run: |
+          gh_pr_up() { gh pr create $* || gh pr edit $* }
+          gh_pr_up --title "[AUTOMATIC] Contribute: ${{ env.branch }}" --body $(cat .github/PULL_REQUEST_TEMPLATE.md)
+        env:
+          GH_TOKEN: ${{ secrets.TOKEN_GITHUB }}
