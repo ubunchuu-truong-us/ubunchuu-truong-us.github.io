@@ -16,11 +16,11 @@ jobs:
 
       - name: Initial commit to branch by bot
         run: |
-          git checkout -b ${{ env.branch }}
+          git checkout ${{ env.branch }}
           git config --global user.name "ubunchuu[bot]"
           git config --global user.email "159746302+ubunchuu-admin@users.noreply.github.com"
           git commit --allow-empty -m "ci: initial commit by bot"
-          git push -u origin ${{ env.branch }}
+          git push origin ${{ env.branch }}
 
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v6
