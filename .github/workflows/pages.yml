@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   build-and-serve:
-    name: Test Build and Serving
+    name: Test
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout Code
