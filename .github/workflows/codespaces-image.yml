@@ -1,5 +1,5 @@
 # Path: .github/workflows/codespaces.yml
-name: Publish Docker image for codespaces
+name: Codespaces Image
 
 on:
   pull_request:

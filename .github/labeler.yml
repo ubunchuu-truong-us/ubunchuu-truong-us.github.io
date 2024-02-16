@@ -1,17 +1,23 @@
 # You can refer README of this repo for future mantainances: https://github.com/actions/labeler
 
 source:
-  - all:
-      - changed-files:
-          - any-glob-to-any-file: 'src/**/*'
-          - all-globs-to-all-files: '!docs/*'
+  - changed-files:
+      - any-glob-to-any-file:
+          - 'src/**/*'
+          - '**/*.js'
 
-content-documentation:
+content:
+  - changed-files:
+      - any-glob-to-any-file:
+          - blog/**/*
+          - docs/**/*
+
+documentation:
   - changed-files:
       - any-glob-to-any-file:
           - docs/**/*
 
-content-blog:
+blog:
   - changed-files:
       - any-glob-to-any-file:
           - blog/**/*
@@ -21,8 +27,4 @@ devops-maintain:
       - any-glob-to-any-file:
           - .github/**/*
           - .devcontainer/**/*
-
-docker:
-  - changed-files:
-      - any-glob-to-any-file:
           - Dockerfile

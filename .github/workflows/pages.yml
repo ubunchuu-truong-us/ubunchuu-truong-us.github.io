@@ -14,7 +14,7 @@ permissions:
 
 jobs:
   build-and-serve:
-    name: Build and Test Serving
+    name: Test Build and Serving
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout Code
@@ -66,7 +66,7 @@ jobs:
   deploy-docusaurus:
     if: github.event_name == 'push'
     needs: [build-and-serve]
-    name: Deploy Docusaurus to GitHub Pages
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout Code (with Submodules)
