@@ -20,6 +20,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
       - name: Setup Node.js Environment
         uses: actions/setup-node@v4
         with:
@@ -27,13 +32,19 @@ jobs:
 
       - name: Install Dependencies
         run: |
-          echo "before_time=$(date +%s)" >> $GITHUB_ENV
+          install_before_time=$(date +%s.%N)
           yarn install --frozen-lockfile
+          install_after_time=$(date +%s.%N)
+          install_time=$(python -c "print($install_after_time - $install_before_time)")
+          echo "installTime=$install_time" >> $GITHUB_ENV
 
       - name: Build Website
         run: |
+          before_time=$(date +%s.%N)
           yarn build
-          echo "after_time=$(date +%s)" >> $GITHUB_ENV
+          after_time=$(date +%s.%N)
+          build_time=$(python -c "print($after_time - $before_time)")
+          echo "buildTime=$build_time" >> $GITHUB_ENV
 
       - name: Verify Build Output
         run: |
@@ -56,11 +67,21 @@ jobs:
         with:
           github-token: ${{ secrets.TOKEN_GITHUB }}
           script: |
+            const installTime = process.env.installTime;
+            const buildTime = process.env.buildTime;
+            const table = `
+              | Step                 | Time (seconds) |
+              |----------------------|----------------|
+              | Install Dependencies | ${installTime} |
+              | Build Website        | ${buildTime}   |
+            `;
+            const header = `## Performance Report\n- Run number: ${process.env.GITHUB_RUN_NUMBER} \n - Run ID: ${process.env.GITHUB_RUN_ID} \n - Run URL: ${process.env.GITHUB_SERVER_URL}/${process.env.GITHUB_REPOSITORY}/actions/runs/${process.env.GITHUB_RUN_ID}\n - ✅ Test server functionality passed with the following times for each step:\n`;
+            const commentBody = `${header}\n\n${table}`;
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: 'Test server functionality passed ✅ with total CI time: ' + (process.env.after_time - process.env.before_time) + ' seconds'
+              body: commentBody
             });
 
   deploy-docusaurus:
