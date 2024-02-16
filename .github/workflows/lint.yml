@@ -22,10 +22,10 @@ jobs:
           fetch-depth: 0
 
       - uses: DavidAnson/markdownlint-cli2-action@v15
+        continue-on-error: true
         with:
           config: '.markdownlint.json'
           globs: '**/*.md'
-          continue-on-error: true
 
       - name: Comment on Pull Request
         if: github.event_name == 'pull_request'
