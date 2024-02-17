@@ -27,15 +27,6 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'ubunchuu-truong-us', // Usually your GitHub org/user name.
   projectName: 'ubunchuu-truong-us.github.io', // Usually your repo name.
-  // Search bar config
-  themes: [
-    [
-      require.resolve('@easyops-cn/docusaurus-search-local'),
-      {
-        hashed: true,
-      },
-    ],
-  ],
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -68,6 +59,13 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      // Algolia DocSearch search integration
+      algolia: {
+        contextualSearch: true,
+        apiKey: '0a9bc2d53144bd55ed0ba248b6876331', // Public API Key (safe to share)
+        appId: '7VSRZ5ZBII', // Provided by Algolia to identify your application
+        indexName: 'ubunchuu-truong-usio', // Name of the index you want to target
+      },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {

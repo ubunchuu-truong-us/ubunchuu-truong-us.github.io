@@ -117,3 +117,19 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Setup Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Install jq
+        uses: dcarbone/install-jq-action@v2.1.0
+
+      - name: Input Algolia secret into .env
+        run: |
+          touch .env
+          echo "API_KEY=${{ secrets.ALGOLIA_API_KEY }}" >> .env
+          echo "APPLICATION_ID=${{ secrets.ALGOLIA_APP_ID }}" >> .env
+
+      - name: Crawling the deployed website using Algolia DocSearch
+        run: |
+          docker run -it --env-file=.env -e "CONFIG=$(cat config.json | jq -r tostring)" algolia/docsearch-scraper
