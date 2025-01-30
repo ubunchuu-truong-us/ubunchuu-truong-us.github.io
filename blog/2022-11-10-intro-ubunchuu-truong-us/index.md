@@ -8,6 +8,8 @@ authors: [lelouvincx]
 
 Ubunchuu! - một project mà team chúng mình đã ấp ủ, nung nấu giấc mơ được đem đến những trải nghiệm dễ dàng hơn bằng Linux (hệ điều hành tối ưu dành cho developer) từ ngọn lửa nhen nhóm đầu tiên, cuối cùng đã thành hình và đang trên đà thực hiện hoá giấc mơ ấy.
 
+<!-- truncate -->
+
 Qua những năm tháng cấp ba và đại học, ăn dầm nằm dề với Linux, chúng mình nhận thấy thực trạng là, dù cho nguồn tài nguyên về Linux (cụ thể là Ubuntu) khá nhiều, nhưng chúng thường đến từ các trang báo mạng, stackoverflow, ... đem đến kiến thức rất rời rạc và không Việt hóa. 
 
 :::info
