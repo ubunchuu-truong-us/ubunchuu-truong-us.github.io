@@ -9,6 +9,8 @@ tags: [tipsntricks, terminal]
 
 Sudo là gì? Sudo là chữ viết tắt của "Superuser Do", dịch dễ hiểu là “Siêu người dùng làm [điều gì đó]“, cho phép người dùng có thể thực hiện một lệnh nào đó trong hệ thống dưới quyền của superuser (quyền của tài khoản root). 
 
+<!-- truncate -->
+
 Hay nói ngắn gọn, với sudo, bạn có thể thực thi bất cứ thứ gì, làm bất cứ thứ gì bạn muốn, là quyền tối cao nhất trong Linux/Unix, và dĩ nhiên bạn sẽ phải cần nhập mật khẩu user để sử dụng "sudo".
 
 :::info

@@ -7,10 +7,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 
-/* code span {
-  font-family: 'JetBrains Mono', monospace !important;
-} */
-
 /* You can override the default Infima variables here. */
 :root {
   /* Font config */
@@ -194,28 +190,56 @@ html[data-theme='dark'] .header-facebook-link:before {
 }
 
 /* Hero subtitle smaller width */
-.hero > .container {
+.hero > .container > .hero__subtitle {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.hero__subtitle {
+  justify-content: center;
   font-size: 1.25rem;
   line-height: 1.5;
-  width: 660px;
+  max-width: 660px;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+  text-align: center;
 }
+
 
 /* Hero button */
 .btn-primary {
   background-color: #5d2f86;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
   color: white !important;
   padding: 12px 32px;
   border-radius: 10px;
 }
 
+/* Hover light effect */
+.btn-primary:hover {
+  background-color: #6a59c3;
+}
+
 .hero > .container a {
   border: none;
+}
+
+/* Hero codeblock */
+.hero__codeblock {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  color: whitesmoke;
+  background-color: #191724;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.5rem;
+  max-width: 25rem;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 10px 20px 2px rgba(208, 52, 255, 0.2);
+}
+
+.hero__typing_effect {
+  color: #ffbbf9;
 }
 
 @media only screen and (max-width: 996px) {
@@ -227,7 +251,7 @@ html[data-theme='dark'] .header-facebook-link:before {
   /* Feature Items Responsive */
   .feature-item {
     width: 75%;
-    margin-top: 24px;
+    margin-top: 16px;
   }
 
   /* On mobile device, display the text, otherwise display icon */

@@ -13,6 +13,8 @@ tags: [manga]
 
 Nung nấu từ ý tưởng này, chúng mình lập ra "Ubunchuu Trường Ú" (thay vì là trường Ichinomiya).
 
+<!-- truncate -->
+
 Tết Âm Lịch 2024 này chúng mình có dự án dịch truyện "Ubunchu!" sát nghĩa từ tiếng Anh (truyện có nhiều thuật ngữ chuyên ngành IT nên những bản Tiếng Việt đã có trên internet hiện đang dịch sai khá nặng), bạn nào có hứng thú thì inbox cho page để apply nhé. (trên mạng đã có người dịch nhưng họ đã drop từ rất lâu, vì vậy chúng mình muốn tiếp tục công trình này).
 
 Cùng đón chờ nhé!

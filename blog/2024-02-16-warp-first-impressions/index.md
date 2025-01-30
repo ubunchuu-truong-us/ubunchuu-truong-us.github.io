@@ -9,6 +9,8 @@ tags: [terminal]
 
 Vậy là mới đây, Warp, một terminal mới đã release phiên bản dành cho Linux. Vài ấn tượng đầu tiên của team Ubunchuu chúng mình:
 
+<!-- truncate -->
+
 - Tích hợp sẵn syntax highlighting, syntax autocompletion, syntax suggestion. Chỉ cần cài về là dùng ngay
 - Nhiều theme đẹp
 - Có tính năng compact mode đối với mỗi command để mình có thể copy, save, ...

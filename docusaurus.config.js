@@ -1,8 +1,4 @@
 // @ts-check
-// `@type` JSDoc annotations allow editor autocompletion and type checking
-// (when paired with `@ts-check`).
-// There are various equivalent ways to declare your Docusaurus config.
-// See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
 
@@ -13,29 +9,15 @@ const config = {
     'Một project "Lai nú" giấu tên tại trường Ú hứa hẹn giúp mọi người bước đầu tiếp cận với Linux, \
     đặc biệt là Ubuntu cùng cách thiết lập chúng như một pro developer.',
   favicon: 'img/favicon.ico',
-
   staticDirectories: ['static'],
-
-  // Set the production url of your site here
   url: 'https://ubunchuu-truong-us.github.io',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl:
     '/' /** Remember to use root baseUrl if repo name == <org-name>.github.io */,
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
   organizationName: 'ubunchuu-truong-us', // Usually your GitHub org/user name.
   projectName: 'ubunchuu-truong-us.github.io', // Usually your repo name.
   // Search bar config
-  themes: [
-    [
-      require.resolve('@easyops-cn/docusaurus-search-local'),
-      {
-        hashed: true,
-      },
-    ],
-  ],
+  themes: [require.resolve("@easyops-cn/docusaurus-search-local")],
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
@@ -108,12 +90,6 @@ const config = {
       footer: {
         style: 'light',
         copyright: `Copyright © ${new Date().getFullYear()} Ubunchuu Trường Ú.`,
-        // logo: {
-        //   alt: 'Ubunchuu Logo',
-        //   src: 'img/undraw_community_linux.svg',
-        //   href: 'https://ubunchuu-truong-us.github.io',
-        //   height: 80,
-        // },
       },
       prism: {
         theme: prismThemes.github,
