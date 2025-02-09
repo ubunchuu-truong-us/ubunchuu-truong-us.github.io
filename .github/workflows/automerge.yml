@@ -30,7 +30,6 @@ jobs:
       #     APPROVE_TEXT: Legit to bot ✅
 
       - name: Auto merge for github_actions label
-        if: contains(github.event.pull_request.labels.*.name, 'github_actions')
         run: |
           git config --global user.name "${USER_NAME}"
           git config --global user.email "${USER_EMAIL}"
