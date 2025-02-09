@@ -28,3 +28,20 @@ devops-maintain:
           - .github/**/*
           - .devcontainer/**/*
           - Dockerfile
+
+autosquash:
+  - changed-files:
+      - any-glob-to-any-file:
+          - .github/**/*
+          - .devcontainer/**/*
+          - blog/**/*
+          - docs/**/*
+          - src/**/*
+          - static/**/*
+          - README.md
+          - babel.config.js
+          - docusaurus.config.js
+          - package.json
+          - yarn.lock
+          - .gitignore
+          - sidebars.js
