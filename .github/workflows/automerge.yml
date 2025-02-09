@@ -1,0 +1,55 @@
+name: 'Automerge'
+on:
+  pull_request_review:
+    types:
+      - submitted
+  status: {}
+
+jobs:
+  automerge:
+    name: Auto Merge PR
+    if: github.event.review.state == 'approved'
+    runs-on: ubuntu-22.04
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      # INFO: ignore this because we have set number of approval to 1
+      # - name: Auto approve
+      #   run: |
+      #     git config --global user.name "${USER_NAME}"
+      #     git config --global user.email "${USER_EMAIL}"
+      #     git config --global credential.helper '!f() { git -c credential.helper=store --push; }; f'
+      #     gh pr review ${{ github.event.pull_request.number }} --approve --body "${APPROVE_TEXT}"
+      #   env:
+      #     GH_TOKEN: ${{ secrets.TOKEN_GITHUB }}
+      #     USER_NAME: ubunchuu[bot]
+      #     USER_EMAIL: 159746302+ubunchuu-admin@users.noreply.github.com
+      #     APPROVE_TEXT: Legit to bot ✅
+
+      - name: Auto merge for github_actions label
+        if: contains(github.event.pull_request.labels.*.name, 'github_actions')
+        run: |
+          git config --global user.name "${USER_NAME}"
+          git config --global user.email "${USER_EMAIL}"
+          curl -X PUT \
+          -H "Authorization: Bearer ${{ secrets.TOKEN_GITHUB }}" \
+          -H "Accept: application/vnd.github.v3+json" \
+          "https://api.github.com/repos/${{ github.repository }}/pulls/${{ github.event.pull_request.number }}/merge?merge_method=squash"
+        env:
+          USER_NAME: ubunchuu[bot]
+          USER_EMAIL: 159746302+ubunchuu-admin@users.noreply.github.com
+
+      - name: Comment on PR
+        if: ${{ steps.automerge.outputs.mergeResult == 'merged' }}
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: `Pull request \#${{ steps.automerge.outputs.pullRequestNumber }} merged!`
+            });
