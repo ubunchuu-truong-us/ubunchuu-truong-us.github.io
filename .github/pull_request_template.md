@@ -1,7 +1,10 @@
 # 🐧 Ubunchuu Contribute Request
 
+## Overview
+
 <!--
-Please do not leave this blank
+Copy this template to the root of your project and update the description to match your project.
+Please do not leave this blank!
 This PR [adds/removes/fixes/replaces] the [content/feature/bug/etc].
 -->
 
@@ -17,30 +20,30 @@ This PR [adds/removes/fixes/replaces] the [content/feature/bug/etc].
 
 ## 📝 Description for my changes
 
-> Please clear this section and include a very short summary of the change (3 lines maximum)
-
 <!--
- Please also include relevant motivation and context. List any dependencies that are required for this change.
+Please also include relevant motivation and context.
+List any dependencies that are required for this change.
 -->
 
 ## 📌 Related Issues
 
 > ❗️MANDATORY❗️
 
-> Please clear this section and note that any changes to the codebase should have a related issue to provide context for the changes.
-
 <!--
+Please clear this section and note that any changes to the codebase should have a related issue to provide context for the changes.
 Please use this format link issue numbers: Fixes #123
 https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword
 -->
 
 ## 🖥️ Mobile/Desktop Screenshots (optinal)
 
-<!-- Visual changes require screenshots -->
-
+<!--
+Visual changes require screenshots
 > If applicable, add screenshots to help explain your changes.
-
 > Please clear this whole section if not applicable.
+-->
+
+
 
 ---
 
