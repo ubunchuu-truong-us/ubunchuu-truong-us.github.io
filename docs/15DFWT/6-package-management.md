@@ -233,7 +233,6 @@ dpkg -l | grep <package-name>
 sudo dpkg -r <package-name>
 ```
 
-
 ## Sử dụng `tar` và `gzip` để cài đặt package
 
 ### 1. Giải nén file `.tar`
@@ -258,10 +257,10 @@ Nhưng nếu file được nén có đuôi `.tar.gz`, có thể hiểu đơn gi�
 
 ![Tar GZ Compare](static/day6-tar-gz-compare.png)
 
-Giải nén cũng rất đơn giản thôi:
+Giải nén cũng rất đơn giản thôi, chỉ cần thêm `-z` vào lệnh extract là xong:
 
 ```bash
-tar -xzf mytarfile.tar.gzén và g
+tar -xzf mytarfile.tar.gz
 ```
 
 Nếu bạn cần câu thần chú, hãy nhớ: e**X**tract all **Z**ee **F**iles!
