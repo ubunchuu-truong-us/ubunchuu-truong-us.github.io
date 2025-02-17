@@ -9,9 +9,9 @@ RUN \
   mkdir -p /home/${DOCKERUSER}/.local/bin /home/${DOCKERUSER}/.config && \
   chown -R ${DOCKERUSER} /home/${DOCKERUSER}/
 
-# Install Node.js 18
+# Install Node.js 22
 RUN \
-  curl -fsSL https://deb.nodesource.com/setup_18.x | bash - && \
+  curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
   apt-get update && apt-get install --no-install-recommends -y nodejs git sudo vim && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -24,6 +24,6 @@ USER ${DOCKERUSER}
 # Install starship for non-root user with pure prompt
 RUN \
   sh -c "$(curl -fsSL https://starship.rs/install.sh)" -- --yes -b /home/${DOCKERUSER}/.local/bin && \
-  echo 'starship preset pure-preset -o ~/.config/starship.toml' >> /home/${DOCKERUSER}/.bashrc && \
+  mkdir -p /home/${DOCKERUSER}/.config && \
+  curl -fsSL "https://raw.githubusercontent.com/ubunchuu-truong-us/dotfiles/refs/heads/main/starship.toml" -o /home/${DOCKERUSER}/.config/starship.toml && \
   echo 'eval "$(starship init bash)"' >> /home/${DOCKERUSER}/.bashrc
-  
