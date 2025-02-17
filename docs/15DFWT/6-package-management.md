@@ -11,6 +11,8 @@ sidebar-position: 6
 
 # Day 6 - Package Management
 
+![cover](static/day6-cover.png)
+
 Dùng Linux gần một tuần rồi, các bạn đã thấy câu này quen chưa?
 
 ```bash
@@ -19,9 +21,11 @@ sudo apt install zsh
 
 Đây là cách cài đặt `zsh` (Z-shell) đã đề cập ở các bài trước bằng cách sử dụng package manager APT.
 
-Từ từ đã, package management là gì? Hãy tưởng tượng bạn đang đi siêu thị để mua quà, và nhân viên siêu thị (package manager) giúp bạn tìm quà, rồi gói quà (với giấy gói, hộp giấy, nơ trang trí các kiểu) cho bạn luôn, tất cả trong một 🥸. Thế là, bạn chỉ cần trả tiền (gõ command) và nhận quà về thôi.
+Từ từ đã, package manager là gì?
 
-## Package manager để làm gì nhỉ
+Hãy tưởng tượng bạn đang đi siêu thị để mua quà, và nhân viên siêu thị (package manager) giúp bạn tìm quà, rồi gói quà (kèm luôn cả giấy gói, hộp giấy, nơ trang trí các kiểu) cho bạn luôn, tất cả trong một 🥸. Thế là, bạn chỉ cần trả tiền (gõ command) và nhận quà về thôi.
+
+## Package manager để làm gì nhỉ?
 
 Vậy thì trên Windows, bạn phải lên mạng tìm phần mềm, tải về, rồi cài từng cái một từ dependencies (driver,...) đến cài đặt chính software đó. Còn trên Linux, bạn chỉ cần gõ lệnh thôi, các ứng dụng (và cả dependencies của chúng) sẽ được tải về và cài đặt tự động. Package manager chính là thứ đứng đằng sau sự tự động đó.
 
@@ -29,7 +33,8 @@ Bạn chỉ cần nhớ là mỗi package manager đều giúp bạn làm một 
 
 ![image](static/day6-memewindows.png)
 
-> *“Quản lý ứng dụng tinh gọn dành cho người tinh tế!”*
+:::note *“Quản lý ứng dụng tinh gọn dành cho người tinh tế!”*
+:::
 
 ## Các loại package manager trên Linux
 
@@ -63,6 +68,10 @@ Mỗi distro Linux có một package manager khác nhau, ví dụ:
 - **rpm** – Công cụ quản lý gói của Red Hat (YUM/DNF sử dụng rpm).
 
 > Các package manager này hoạt động ở mức thấp hơn, trực tiếp xử lý các tệp `.deb` hoặc `.rpm`.
+
+### 4. Sử dụng `tar` và `gzip`
+
+Không phải lúc nào cũng cần đến các package manager phức tạp, đôi khi các `packages` hay `softwares` chỉ được release trong một file `.tar.gz` hoặc `.tar` và bạn chỉ cần giải nén ra và chạy thôi. Đó cũng là lý do mà chúng mình đặt `tar` và `gzip` vào đây.
 
 ## Quản lý package trên Ubuntu/Debian với APT
 
@@ -223,6 +232,64 @@ dpkg -l | grep <package-name>
 ```bash
 sudo dpkg -r <package-name>
 ```
+
+
+## Sử dụng `tar` và `gzip` để cài đặt package
+
+### 1. Giải nén file `.tar`
+
+Để giải nén một file `.tar`, hãy thử lệnh sau:
+
+```bash
+tar -xf mytarfile.tar
+```
+
+Trong đó:
+- `-x` là lệnh extract.
+- `-f` dùng để chỉ định file.
+
+:::tip
+Có thể thêm `-v` (verbose) để hiển thị chi tiết quá trình giải nén, bao gồm dung lượng, số lượng file, thời gian, v.v.
+:::
+
+### 2. Giải nén file `.tar.gz`
+
+Nhưng nếu file được nén có đuôi `.tar.gz`, có thể hiểu đơn giản, các tệp được compress bằng `gzip` trước, sau đó được đặt vào một file `.tar` để tạo thành `.tar.gz`, như này dung lượng sẽ nhỏ hơn so với `.tar` nhiều chút. Nhưng ta không cần học thêm syntax của `gzip` vì bản thân `tar` đã tích hợp sẵn rồi.
+
+![Tar GZ Compare](static/day6-tar-gz-compare.png)
+
+Giải nén cũng rất đơn giản thôi:
+
+```bash
+tar -xzf mytarfile.tar.gzén và g
+```
+
+Nếu bạn cần câu thần chú, hãy nhớ: e**X**tract all **Z**ee **F**iles!
+
+> Đọc thêm về `gzip`, là chương trình để nén file với đuôi `.gz` [ở đây](https://www.gnu.org/software/gzip/).
+
+### 3. Nén file và thư mục
+
+Trong quá trình phát triển software, đôi khi bạn sẽ cần release một phiên bản mới, và để người dùng dễ dàng cài đặt, bạn sẽ đóng gói nó vào một file `.tar.gz` hoặc `.tar` để người dùng chỉ cần giải nén và chạy thôi. Cũng tương tự với extract như ban nãy, thì bây giờ ta cần:
+
+```bash
+tar -czf mytarfile.tar.gz myfolder
+```
+
+Trong đó:
+- `-c` là lệnh create.
+- `-z` dùng để compress file bằng `gzip`.
+- `-f` dùng để chỉ định file.
+- `myfolder` là thư mục cần nén.
+- `mytarfile.tar.gz` là tên file sau khi nén.
+
+:::note Nén nhiều file hay folder lẻ
+```bash
+tar -czf mytarfile.tar.gz mycoolfile1 mycoolfile2 mycoolfolder
+```
+:::
+
+À ờm, bỏ `-z` đi thì nó chỉ nén bằng `tar` thôi, không nén bằng `gzip` nữa, nhưng mà dung lượng sẽ lớn hơn nhiều lần đó.
 
 ## Quản lý Package Bên Ngoài Với Snap và Flatpak
 
