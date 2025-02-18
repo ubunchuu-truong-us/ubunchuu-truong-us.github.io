@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkubunchuu_truong_us_github_io=self.webpackChunkubunchuu_truong_us_github_io||[]).push([[1903],{1912:u=>{u.exports=JSON.parse('{"blogBasePath":"/blog","blogTitle":"Blog","authorsListPath":"/blog/authors"}')}}]);

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkubunchuu_truong_us_github_io=self.webpackChunkubunchuu_truong_us_github_io||[]).push([[8121],{8070:u=>{u.exports=JSON.parse('{"tags":[{"label":"terminal","permalink":"/blog/tags/terminal","count":2},{"label":"manga","permalink":"/blog/tags/manga","count":1},{"label":"tipsntricks","permalink":"/blog/tags/tipsntricks","count":1}]}')}}]);
