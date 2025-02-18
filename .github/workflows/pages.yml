@@ -3,10 +3,10 @@ name: 'Docusaurus CI/CD'
 on:
   push:
     branches: ['main']
-    paths: ['./docs/**', './blog/**', './src/**', './static/**', './package.json', './yarn.lock']
+    paths: ['docs/**', 'blog/**', 'src/**', 'static/**', 'package.json', 'yarn.lock', '!pr-preview/**']
   pull_request:
     branches: ['main']
-    paths: ['./docs/**', './blog/**', './src/**', './static/**', './package.json', './yarn.lock']
+    paths: ['docs/**', 'blog/**', 'src/**', 'static/**', 'package.json', 'yarn.lock']
 
 permissions:
   contents: read
