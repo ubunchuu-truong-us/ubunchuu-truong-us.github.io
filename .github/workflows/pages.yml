@@ -3,7 +3,7 @@ name: 'Docusaurus CI/CD'
 on:
   push:
     branches: ['main']
-    paths: ['docs/**', 'blog/**', 'src/**', 'static/**', '**/*.js', 'package.json', 'yarn.lock']
+    paths: ['docs/**', 'blog/**', 'src/**', 'static/**', '**/*.js', 'package.json', 'yarn.lock', '!pr-preview/** ']
   pull_request:
     branches: ['main']
     paths: ['docs/**', 'blog/**', 'src/**', 'static/**', '**/*.js', 'package.json', 'yarn.lock']
@@ -85,6 +85,15 @@ jobs:
               repo: context.repo.repo,
               body: commentBody
             });
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: build
+          preview-branch: ${{ github.event.pull_request.head.ref }}
+          umbrella-dir: pr-preview
+          token: ${{ secrets.TOKEN_GITHUB }}
+          action: auto
 
   deploy-docusaurus:
     if: github.event_name == 'push'
