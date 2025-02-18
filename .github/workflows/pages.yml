@@ -3,10 +3,10 @@ name: 'Docusaurus CI/CD'
 on:
   push:
     branches: ['main']
-    paths: ['docs/**', 'blog/**', 'src/**', 'static/**', '**/*.js', 'package.json', 'yarn.lock']
+    paths: ['docs/**', 'blog/**', 'src/**', 'static/**', 'package.json', 'yarn.lock']
   pull_request:
     branches: ['main']
-    paths: ['docs/**', 'blog/**', 'src/**', 'static/**', '**/*.js', 'package.json', 'yarn.lock']
+    paths: ['docs/**', 'blog/**', 'src/**', 'static/**', 'package.json', 'yarn.lock']
 
 permissions:
   contents: read
@@ -90,7 +90,8 @@ jobs:
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: build
-          preview-branch: gh-pages
+          preview-branch: ${{ github.event.pull_request.head.ref }}
+          umbrella-dir: pr-preview
           token: ${{ secrets.TOKEN_GITHUB }}
           action: auto
 
