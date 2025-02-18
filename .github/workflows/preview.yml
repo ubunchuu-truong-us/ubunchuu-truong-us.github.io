@@ -1,0 +1,33 @@
+name: Deploy PR previews
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths: ['docs/**', 'blog/**', 'src/**', 'static/**', '**/*.js', 'package.json', 'yarn.lock']
+
+concurrency: preview-${{ github.ref }}
+
+jobs:
+  deploy-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code (with Submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install Dependencies & Build
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: build
+          preview-branch: main
