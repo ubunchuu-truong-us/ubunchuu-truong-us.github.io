@@ -21,7 +21,7 @@ sudo apt install zsh
 
 Đây là cách cài đặt `zsh` (Z-shell) đã đề cập ở các bài trước bằng cách sử dụng package manager APT.
 
-Từ từ đã, package manager là gì?
+Nhưng từ từ đã, package manager là gì?
 
 Hãy tưởng tượng bạn đang đi siêu thị để mua quà, và nhân viên siêu thị (package manager) giúp bạn tìm quà, rồi gói quà (kèm luôn cả giấy gói, hộp giấy, nơ trang trí các kiểu) cho bạn luôn, tất cả trong một 🥸. Thế là, bạn chỉ cần trả tiền (gõ command) và nhận quà về thôi.
 
