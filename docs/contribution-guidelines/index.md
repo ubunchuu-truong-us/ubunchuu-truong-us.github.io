@@ -15,10 +15,10 @@ Do đảm bảo mọi thay đổi sẽ được thảo luận và review kỹ l�
 ![GitHub Issue](static/github-issue.png)
 
 :::info
-Sau khi template được tạo, hãy chờ chúng minh phản hồi và sẽ nhanh mình sẽ tiến hành develop cùng nhau thôi
+Sau khi template được tạo, hãy chờ chúng mình phản hồi bằng **code review** trong vòng 2 ngày.
 :::
 
-2. **Bước 2**: Ở Issue đã tạo ở Bước 1, một nhánh/branch mới từ `main` (link với Issue) và đặt tên nhánh theo định dạng `content/<tên-issue-của-bạn>`.
+2. **Bước 2**: Ở Issue đã tạo ở Bước 1, checkout một branch/nhánh mới từ `main` (link với Issue) và đặt tên nhánh theo định dạng `content/<mã-issue>-<tên-issue-của-bạn>`.
 
 :::tip
 Đễ dễ nhất, hãy nhấn **Create a branch** tại *vị trí 1* như hình dưới đây và chỉ cần thêm prefix `content/` vào tên có sẵn.
@@ -33,7 +33,9 @@ Sau khi bạn tạo nhánh mới, một draft pull request sẽ tự động đ�
 Và nó sẽ trông như thế này, lúc này mình cần mọi người Edit lại description của PR cho phù hợp với nội dung bài viết của mình nhé, chỉ cần nhấn vào biểu tượng bút chì như hình dưới đây.
 
 ![GitHub PR](static/github-pr.png)
+Sau khi tạo xong issue và draft pull request, bạn đã hoàn thành được 20% rồi đó! 80% còn lại tập trung vào viết content thôi.
 
+Có 2 cách để vừa viết content, vừa xem nội dung sẽ như thế nào nếu ở phiên bản web: dùng GitHub Codespace hoặc dev dưới local.
 ## Cách 1: GitHub Codespaces
 
 Chúng mình đã cung cấp một môi trường Codespaces để bạn có thể dễ dàng đóng góp cho blog của chúng mình. Việc này giúp bạn không cần phải cài đặt môi trường phát triển trên máy tính ở local và cũng sẽ match environment với môi trường CI của chúng mình hơn, đảm bảo tính nhất quán trong việc deployment.
@@ -41,7 +43,10 @@ Chúng mình đã cung cấp một môi trường Codespaces để bạn có th�
 :::info Codespaces là gì vậy ta?
 GitHub Codespaces là một môi trường phát triển trên cloud, cho phép bạn viết code, push code, và thậm chí là chạy code mà không cần phải cài đặt bất kỳ thứ gì trên máy tính của bạn. Điều này giúp bạn tiết kiệm thời gian và công sức khi setup môi trường phát triển. [Xem thêm](https://docs.github.com/en/codespaces)
 
-Đối với chúng mình, để dễ hiểu mà nói, GitHub Codespaces chỉ đơn thuần là một cái `VSCode` chạy trên browser thôi. Có sẵn môi trường phát triển, terminal, và mọi thứ bạn cần.
+Đối với chúng mình, để dễ hiểu mà nói, GitHub Codespaces chỉ đơn thuần là một cái `VSCode` chạy trên browser thôi. Có sẵn môi trường phát triển, terminal, và mọi thứ bạn cần, mà không cần phải cài bất cứ thứ gì trực tiếp vào máy.
+
+**Vậy có nhược điểm gì không nhỉ?**
+=> Nhược điểm dễ thấy nhất là vì bản chất GitHub Codespace cung cấp cho bạn 1 máy ảo để điều khiển từ xa, nên sẽ bị chậm trong quá trình tương tác hơn là chạy dưới máy của bạn.
 :::
 
 1. **Bước 1**: Tạo GitHub Codespaces để bắt đầu viết bài.
