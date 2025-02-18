@@ -91,6 +91,7 @@ jobs:
         with:
           source-dir: build
           preview-branch: ${{ github.event.pull_request.head.ref }}
+          token: ${{ secrets.TOKEN_GITHUB }}
           action: auto
 
   deploy-docusaurus:
