@@ -86,6 +86,13 @@ jobs:
               body: commentBody
             });
 
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        with:
+          source-dir: build
+          preview-branch: ${{ github.ref }}
+          action: auto
+
   deploy-docusaurus:
     if: github.event_name == 'push'
     needs: [build-and-serve]
