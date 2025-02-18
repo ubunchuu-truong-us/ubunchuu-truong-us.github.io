@@ -90,7 +90,7 @@ jobs:
         uses: rossjrw/pr-preview-action@v1
         with:
           source-dir: build
-          preview-branch: ${{ github.ref_name }}
+          preview-branch: ${GITHUB_REF##*/}
           action: auto
 
   deploy-docusaurus:
