@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://ubunchuu-truong-us.github.io/blog</id>
+    <title>Ubunchuu Trường Ú Blog</title>
+    <updated>2024-02-16T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://ubunchuu-truong-us.github.io/blog"/>
+    <subtitle>Ubunchuu Trường Ú Blog</subtitle>
+    <icon>https://ubunchuu-truong-us.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Warp Terminal]]></title>
+        <id>https://ubunchuu-truong-us.github.io/blog/warp-first-impressions</id>
+        <link href="https://ubunchuu-truong-us.github.io/blog/warp-first-impressions"/>
+        <updated>2024-02-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[warp-image]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" alt="warp-image" src="https://ubunchuu-truong-us.github.io/assets/images/image-989f13734cc72a877cce29a51b9dd5a4.png" width="1200" height="676" class="img_ev3q"></p>
+<p>Vậy là mới đây, Warp, một terminal mới đã release phiên bản dành cho Linux. Vài ấn tượng đầu tiên của team Ubunchuu chúng mình:</p>
+<ul>
+<li>Tích hợp sẵn syntax highlighting, syntax autocompletion, syntax suggestion. Chỉ cần cài về là dùng ngay</li>
+<li>Nhiều theme đẹp</li>
+<li>Có tính năng compact mode đối với mỗi command để mình có thể copy, save, ...</li>
+<li>AI suggestion giúp đôi lúc quên bash script</li>
+<li>Kênh tiktok khá là cool</li>
+</ul>
+<p>Còn ý kiến của bạn về Warp như thế nào? Comment để tụi mình cùng bàn luận nhe!</p>
+<p><a href="https://www.warp.dev/" target="_blank" rel="noopener noreferrer">https://www.warp.dev/</a></p>]]></content>
+        <author>
+            <name>Đinh Minh Chính</name>
+            <uri>https://github.com/lelouvincx</uri>
+        </author>
+        <category label="terminal" term="terminal"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Giới thiệu dự án "dịch truyện Ubunchu!"]]></title>
+        <id>https://ubunchuu-truong-us.github.io/blog/intro-manga-ubunchuu</id>
+        <link href="https://ubunchuu-truong-us.github.io/blog/intro-manga-ubunchuu"/>
+        <updated>2024-01-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Ý tưởng về Ubunchuu chúng mình xuất phát từ bộ manga cùng tên "Ubunchu!", kể về một câu lạc bộ học Linux ở trường THPT Ichinomiya, chuyện xoay quanh hành trình của cô gái Akane dụ dỗ từng học sinh ở trường hãy xóa Windows, cùng nhau chia sẻ việc học Linux, học CLI, Shell Scripting...]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" src="https://ubunchuu-truong-us.github.io/assets/images/manga-ubunchuu-dcda027c67e2d688b0620f4a289d4608.jpg" width="1272" height="810" class="img_ev3q"></p>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>❓ Có thể bạn chưa biết</div><div class="admonitionContent_BuS1"><p>Ý tưởng về Ubunchuu chúng mình xuất phát từ bộ manga cùng tên "Ubunchu!", kể về một câu lạc bộ học Linux ở trường THPT Ichinomiya, chuyện xoay quanh hành trình của cô gái Akane dụ dỗ từng học sinh ở trường hãy xóa Windows, cùng nhau chia sẻ việc học Linux, học CLI, Shell Scripting...</p></div></div>
+<p>Nung nấu từ ý tưởng này, chúng mình lập ra "Ubunchuu Trường Ú" (thay vì là trường Ichinomiya).</p>
+<p>Tết Âm Lịch 2024 này chúng mình có dự án dịch truyện "Ubunchu!" sát nghĩa từ tiếng Anh (truyện có nhiều thuật ngữ chuyên ngành IT nên những bản Tiếng Việt đã có trên internet hiện đang dịch sai khá nặng), bạn nào có hứng thú thì inbox cho page để apply nhé. (trên mạng đã có người dịch nhưng họ đã drop từ rất lâu, vì vậy chúng mình muốn tiếp tục công trình này).</p>
+<p>Cùng đón chờ nhé!</p>]]></content>
+        <author>
+            <name>Bùi Quang Thắng</name>
+            <uri>https://github.com/thangbuiq</uri>
+        </author>
+        <category label="manga" term="manga"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Startup tỉ đô sắp trở lại]]></title>
+        <id>https://ubunchuu-truong-us.github.io/blog/startup-ti-do-sap-tro-lai</id>
+        <link href="https://ubunchuu-truong-us.github.io/blog/startup-ti-do-sap-tro-lai"/>
+        <updated>2023-10-16T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[trong thời gian qua page tụi mình chân thành xin lỗi các bạn vì đã im hơi lặng tiếng. nhưng nay chúng mình xin thông báo sắp quay trở lại với những tutorial chất lượng hết nước chấm.]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" src="https://ubunchuu-truong-us.github.io/assets/images/cover-8388567b3cb7b57b2ea313d659c14096.jpg" width="750" height="1000" class="img_ev3q"></p>
+<p>trong thời gian qua page tụi mình chân thành xin lỗi các bạn vì đã im hơi lặng tiếng. nhưng nay chúng mình xin thông báo sắp quay trở lại với những tutorial chất lượng hết nước chấm.</p>
+<p>hiện ubunchuu đang huy động nhân lực vốn có để viết content cật lực và chắt lọc kỹ càng, với lực lượng lên đến 4xx người (mà cụ thể là 4 người)</p>
+<p>cùng hóng nào</p>]]></content>
+        <author>
+            <name>Bùi Quang Thắng</name>
+            <uri>https://github.com/thangbuiq</uri>
+        </author>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[SUDO là gì mà quyền lực thế?]]></title>
+        <id>https://ubunchuu-truong-us.github.io/blog/what-is-sudo</id>
+        <link href="https://ubunchuu-truong-us.github.io/blog/what-is-sudo"/>
+        <updated>2023-03-22T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Sudo là gì? Sudo là chữ viết tắt của "Superuser Do", dịch dễ hiểu là “Siêu người dùng làm [điều gì đó]“, cho phép người dùng có thể thực hiện một lệnh nào đó trong hệ thống dưới quyền của superuser (quyền của tài khoản root).]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" src="https://ubunchuu-truong-us.github.io/assets/images/sudo-324eb1f145f3fabd26388496f0b581b9.jpg" width="940" height="788" class="img_ev3q"></p>
+<p>Sudo là gì? Sudo là chữ viết tắt của "Superuser Do", dịch dễ hiểu là “Siêu người dùng làm [điều gì đó]“, cho phép người dùng có thể thực hiện một lệnh nào đó trong hệ thống dưới quyền của superuser (quyền của tài khoản root).</p>
+<p>Hay nói ngắn gọn, với sudo, bạn có thể thực thi bất cứ thứ gì, làm bất cứ thứ gì bạn muốn, là quyền tối cao nhất trong Linux/Unix, và dĩ nhiên bạn sẽ phải cần nhập mật khẩu user để sử dụng "sudo".</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Ví dụ: <code>sudo apt install google-chrome</code>
+=&gt; Bạn sẽ phải cần quyền sudo để có thể cài một ứng dụng nào đó vào một hệ thống Linux.</p></div></div>
+<p>Sudo là một lệnh trong hệ điều hành Linux/Unix, cho phép người dùng có quyền thực thi các lệnh hoặc chương trình với đặc quyền người dùng cao hơn, thường là quyền quản trị hệ thống (root). Việc sử dụng sudo giúp tăng cường bảo mật và kiểm soát quyền truy cập trên hệ thống.</p>
+<div class="theme-admonition theme-admonition-warning admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>fact</div><div class="admonitionContent_BuS1"><p>Đây cũng là tính năng dẫn đến sự bảo mật toàn vẹn của hệ điều hành Linux/Unix, vì đến người dùng còn phải biết pass để truy cập các lệnh dưới quyền sudo, thì nói gì đến các "hắc kẻ" (hacker 😂) khi thực hiện tấn công vào hệ thống của các bạn.</p></div></div>]]></content>
+        <author>
+            <name>Bùi Quang Thắng</name>
+            <uri>https://github.com/thangbuiq</uri>
+        </author>
+        <category label="tipsntricks" term="tipsntricks"/>
+        <category label="terminal" term="terminal"/>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Giới thiệu Ubunchuu Trường Ú]]></title>
+        <id>https://ubunchuu-truong-us.github.io/blog/intro-ubunchuu-truong-us</id>
+        <link href="https://ubunchuu-truong-us.github.io/blog/intro-ubunchuu-truong-us"/>
+        <updated>2022-11-10T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Ubunchuu! - một project mà team chúng mình đã ấp ủ, nung nấu giấc mơ được đem đến những trải nghiệm dễ dàng hơn bằng Linux (hệ điều hành tối ưu dành cho developer) từ ngọn lửa nhen nhóm đầu tiên, cuối cùng đã thành hình và đang trên đà thực hiện hoá giấc mơ ấy.]]></summary>
+        <content type="html"><![CDATA[<p><img decoding="async" loading="lazy" src="https://ubunchuu-truong-us.github.io/assets/images/cover-242d0617a6b581adde9fe8535aa42084.jpg" width="951" height="678" class="img_ev3q"></p>
+<p>Ubunchuu! - một project mà team chúng mình đã ấp ủ, nung nấu giấc mơ được đem đến những trải nghiệm dễ dàng hơn bằng Linux (hệ điều hành tối ưu dành cho developer) từ ngọn lửa nhen nhóm đầu tiên, cuối cùng đã thành hình và đang trên đà thực hiện hoá giấc mơ ấy.</p>
+<p>Qua những năm tháng cấp ba và đại học, ăn dầm nằm dề với Linux, chúng mình nhận thấy thực trạng là, dù cho nguồn tài nguyên về Linux (cụ thể là Ubuntu) khá nhiều, nhưng chúng thường đến từ các trang báo mạng, stackoverflow, ... đem đến kiến thức rất rời rạc và không Việt hóa.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Hệ quả là bạn muốn làm quen với Linux nhưng không biết bắt đầu từ đâu, bạn đi copy code rải rác trên StackOverflow mà không hiểu ý nghĩa, khiến hệ thống của bạn dễ sinh bug và crash.</p></div></div>
+<p>Nhận thấy tai hại đó, chúng mình đã nảy sinh ý tưởng tạo ra một cộng đồng nơi mọi người có thể tiếp cận với các tutorial được chuẩn hóa và đồng bộ (từ việc chia phân vùng, cài các distro của Linux cho tới config chúng), và có thể cùng nhau chia sẻ kiến thức, kinh nghiệm của bản thân với hệ điều hành Linux.</p>
+<blockquote>
+<p>Và thế là… <strong>Ubunchuu Trường Ú ra đời!</strong></p>
+</blockquote>
+<p>Những dự án sắp tới:</p>
+<ul>
+<li><strong>"15 days flying with Tux"</strong>: 15 ngày cài và config Ubuntu cho người mới.</li>
+<li><strong>"Linux for Data Engineering"</strong>: dùng linux cho tác vụ xây dựng cơ sở hạ tầng dữ liệu, tính toán song song, hệ thống phân tán, big data. Side-project này sẽ giúp bạn trả lời cho câu hỏi "vì sao nên dùng Linux cho ngành kỹ thuật dữ liệu?".</li>
+<li><strong>"Dive into Arch"</strong>: đào sâu vào Arch Linux và các câu lệnh hệ thống nâng cao.</li>
+<li><strong>"Translate Ubunchu!"</strong>: dịch truyện tranh Ubunchu! - nguồn gốc của tên project.</li>
+<li>... và vô số dự án nho nhỏ khác.</li>
+</ul>
+<div class="theme-admonition theme-admonition-tip admonition_xJq3 alert alert--success"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 12 16"><path fill-rule="evenodd" d="M6.5 0C3.48 0 1 2.19 1 5c0 .92.55 2.25 1 3 1.34 2.25 1.78 2.78 2 4v1h5v-1c.22-1.22.66-1.75 2-4 .45-.75 1-2.08 1-3 0-2.81-2.48-5-5.5-5zm3.64 7.48c-.25.44-.47.8-.67 1.11-.86 1.41-1.25 2.06-1.45 3.23-.02.05-.02.11-.02.17H5c0-.06 0-.13-.02-.17-.2-1.17-.59-1.83-1.45-3.23-.2-.31-.42-.67-.67-1.11C2.44 6.78 2 5.65 2 5c0-2.2 2.02-4 4.5-4 1.22 0 2.36.42 3.22 1.19C10.55 2.94 11 3.94 11 5c0 .66-.44 1.78-.86 2.48zM4 14h5c-.23 1.14-1.3 2-2.5 2s-2.27-.86-2.5-2z"></path></svg></span>tip</div><div class="admonitionContent_BuS1"><p>Ngoài ra, cái tên Ubunchuu cũng được lấy từ bộ truyện tranh cùng tên. Và vì thế, “Ubunchuu Trường Ú”, mang trong mình sứ mệnh cung cấp tài liệu về Linux cụ thể, sâu và đầy đủ nhất có thể, hướng tới đối tượng đại đa số là các bạn sinh viên có niềm đam mê mãnh liệt với công nghệ và cộng đồng mã nguồn mở đã được khởi động!</p></div></div>]]></content>
+        <author>
+            <name>Đinh Minh Chính</name>
+            <uri>https://github.com/lelouvincx</uri>
+        </author>
+    </entry>
+</feed>
