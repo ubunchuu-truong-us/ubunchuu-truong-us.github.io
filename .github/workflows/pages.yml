@@ -108,7 +108,7 @@ jobs:
   cleanup-comments:
     name: cleanup old bot's comments
     runs-on: ubuntu-22.04
-    needs: lint-models
+    needs: build-and-serve
     steps:
       - name: Remove old bot comments
         uses: actions/github-script@v7
