@@ -120,9 +120,9 @@ jobs:
               issue_number: context.issue.number,
             });
 
-            // Filter comments made by github-actions[bot]
+            // Filter comments made by ubunchuu-admin
             const botComments = comments.filter(
-              (comment) => comment.user.login === 'ubunchuu[bot]'
+              (comment) => comment.user.login === 'ubunchuu-admin'
             );
 
             // Sort comments by creation date in descending order
