@@ -36,6 +36,7 @@ Và nó sẽ trông như thế này, lúc này mình cần mọi người Edit l
 Sau khi tạo xong issue và draft pull request, bạn đã hoàn thành được 20% rồi đó! 80% còn lại tập trung vào viết content thôi.
 
 Có 2 cách để vừa viết content, vừa xem nội dung sẽ như thế nào nếu ở phiên bản web: dùng GitHub Codespace hoặc dev dưới local.
+
 ## Cách 1: GitHub Codespaces
 
 Chúng mình đã cung cấp một môi trường Codespaces để bạn có thể dễ dàng đóng góp cho blog của chúng mình. Việc này giúp bạn không cần phải cài đặt môi trường phát triển trên máy tính ở local và cũng sẽ match environment với môi trường CI của chúng mình hơn, đảm bảo tính nhất quán trong việc deployment.
@@ -46,7 +47,7 @@ GitHub Codespaces là một môi trường phát triển trên cloud, cho phép 
 Đối với chúng mình, để dễ hiểu mà nói, GitHub Codespaces chỉ đơn thuần là một cái `VSCode` chạy trên browser thôi. Có sẵn môi trường phát triển, terminal, và mọi thứ bạn cần, mà không cần phải cài bất cứ thứ gì trực tiếp vào máy.
 
 **Vậy có nhược điểm gì không nhỉ?**
-=> Nhược điểm dễ thấy nhất là vì bản chất GitHub Codespace cung cấp cho bạn 1 máy ảo để điều khiển từ xa, nên sẽ bị chậm trong quá trình tương tác hơn là chạy dưới máy của bạn.
+==> Dễ thấy nhất là vì bản chất GitHub Codespace cung cấp cho bạn 1 máy ảo để điều khiển từ xa, nên sẽ bị chậm trong quá trình tương tác hơn là chạy dưới máy của bạn.
 :::
 
 1. **Bước 1**: Tạo GitHub Codespaces để bắt đầu viết bài.
