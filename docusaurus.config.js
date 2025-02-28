@@ -71,6 +71,7 @@ const config = {
             position: 'left',
           },
           {to: '/blog', label: 'Blog', position: 'left'},
+          {to: '/docs/contribution-guidelines', label: 'Contribute', position: 'left'},
           {
             href: 'https://github.com/ubunchuu-truong-us',
             position: 'right',

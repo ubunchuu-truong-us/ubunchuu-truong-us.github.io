@@ -6,9 +6,9 @@ sidebar-position: -1
 
 Ubunchuu rất vui khi bạn quyết định đóng góp cho blog của chúng mình. Để đảm bảo mọi người đều thuận tiện và dễ dàng khi đóng góp, chúng mình đã viết ra một số hướng dẫn dưới đây.
 
-## Before You Start
+## Trước khi bắt đầu
 
-Do đảm bảo mọi thay đổi sẽ được thảo luận và review kỹ lưỡng, chúng mình khuyến khích mọi người tạo một **GitHub Issue** trước khi bắt đầu viết bài. Điều này giúp chúng mình hiểu rõ hơn về nội dung bạn muốn viết và cũng giúp chúng mình xây dựng một cộng đồng đóng góp chặt chẽ hơn.
+Để đảm bảo mọi thay đổi sẽ được thảo luận và review kỹ lưỡng, chúng mình khuyến khích mọi người tạo một **GitHub Issue** trước khi bắt đầu viết bài. Điều này giúp chúng mình hiểu rõ hơn về nội dung bạn muốn viết và cũng giúp chúng mình xây dựng một cộng đồng đóng góp chặt chẽ hơn.
 
 1. **Bước 1**: Tạo **GitHub Issue** ở repo [ubunchuu-truong-us/ubunchuu-truong-us.github.io](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io) để thảo luận với chúng mình về những thay đổi bạn muốn thực hiện. Ở đây bạn chọn vào template có tên **New Content Request** nhé.
 
@@ -33,6 +33,7 @@ Sau khi bạn tạo nhánh mới, một draft pull request sẽ tự động đ�
 Và nó sẽ trông như thế này, lúc này mình cần mọi người Edit lại description của PR cho phù hợp với nội dung bài viết của mình nhé, chỉ cần nhấn vào biểu tượng bút chì như hình dưới đây.
 
 ![GitHub PR](static/github-pr.png)
+
 Sau khi tạo xong issue và draft pull request, bạn đã hoàn thành được 20% rồi đó! 80% còn lại tập trung vào viết content thôi.
 
 Có 2 cách để vừa viết content, vừa xem nội dung sẽ như thế nào nếu ở phiên bản web: dùng GitHub Codespace hoặc dev dưới local.
