@@ -1,5 +1,7 @@
 name: Create Contribute Pull Request
+
 on: create
+
 permissions:
   contents: write
   pull-requests: write
@@ -7,8 +9,8 @@ permissions:
 
 jobs:
   create_pull_request:
-    if: ${{ contains(github.ref, 'refs/heads/content/') }}
-    runs-on: ubuntu-22.04
+    if: ${{ contains(github.ref, 'refs/heads/content/') || endsWith(github.ref, '-content-') }}
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
