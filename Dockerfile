@@ -25,7 +25,7 @@ RUN curl https://mise.run | sh && \
 
 # Install yarn
 COPY mise.toml mise.toml
-RUN mise install
+RUN /root/.local/bin/mise install
 
 USER ${DOCKERUSER}
 
