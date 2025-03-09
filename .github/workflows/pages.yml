@@ -38,6 +38,9 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Update yarn version
+        run: yarn set version 4.5.0
+
       - name: Install Dependencies
         run: |
           install_before_time=$(date +%s.%N)
