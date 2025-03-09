@@ -1,6 +1,6 @@
 <h1> <b>Ubunchuu Trường Ú Blog  </b></h1>
 
-![Docusaurus Badge](https://img.shields.io/badge/docusaurus-3.1.1-green) [![github pages](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/pages.yml) [![Create and publish a Docker image](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/codespaces-image.yml/badge.svg?branch=main)](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/codespaces-image.yml)
+![Docusaurus Badge](https://img.shields.io/badge/docusaurus-3.1.1-green) [![Create and publish a Docker image](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/codespaces-image.yml/badge.svg?branch=main)](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/codespaces-image.yml)
 
 <div style="display: flex; align-items: center;">
   <img src="static/img/favicon.ico" width="150" alt="logo">
