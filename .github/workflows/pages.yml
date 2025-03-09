@@ -1,18 +1,6 @@
 name: 'Docusaurus CI/CD'
 
 on:
-  push:
-    branches: ['main']
-    paths:
-      [
-        'docs/**',
-        'blog/**',
-        'src/**',
-        'static/**',
-        '**/*.js',
-        'package.json',
-        'yarn.lock',
-      ]
   pull_request:
     branches: ['main']
     paths:
@@ -35,7 +23,7 @@ permissions:
 jobs:
   build-and-serve:
     name: Test
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -107,7 +95,7 @@ jobs:
   # Cleanup old comments made by the bot, only keep the most recent
   cleanup-comments:
     name: cleanup old bot's comments
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     needs: build-and-serve
     steps:
       - name: Remove old bot comments
@@ -141,37 +129,3 @@ jobs:
                 comment_id: comment.id,
               });
             }
-
-  deploy-docusaurus:
-    if: github.event_name == 'push'
-    needs: [build-and-serve]
-    name: Deploy to GitHub Pages
-    runs-on: ubuntu-22.04
-    steps:
-      - name: Checkout Code (with Submodules)
-        uses: actions/checkout@v4
-        with:
-          submodules: 'recursive'
-
-      - name: Setup Node.js Environment
-        uses: actions/setup-node@v4
-        with:
-          node-version: '22'
-
-      - name: Install Dependencies
-        run: yarn install --frozen-lockfile
-
-      - name: Build Website
-        run: yarn build
-
-      - name: Configure GitHub Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload Website Artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: './build'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
