@@ -1,5 +1,4 @@
-# Path: .github/workflows/codespaces.yml
-name: Codespaces Image
+name: Build Codespaces Image
 
 on:
   pull_request:
@@ -12,14 +11,14 @@ on:
       - Dockerfile
 
 env:
-  USER: thangbuiq
+  USER: ubunchuu-admin
   REGISTRY: ghcr.io
   IMAGE_NAME: ubunchuu-truong-us/devcontainer:latest
 
 jobs:
-  build-test-image:
-    name: Test
-    runs-on: ubuntu-22.04
+  dry-run:
+    name: dry run
+    runs-on: ubuntu-24.04
     permissions:
       contents: read
       packages: read
@@ -35,7 +34,8 @@ jobs:
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
 
   build-and-push-image:
-    runs-on: ubuntu-22.04
+    name: build and push image to ghcr.io
+    runs-on: ubuntu-24.04
     if: github.event_name == 'push'
     needs: [build-test-image]
     permissions:
