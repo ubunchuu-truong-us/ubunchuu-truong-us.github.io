@@ -1,6 +1,6 @@
 <h1> <b>Ubunchuu Trường Ú Blog  </b></h1>
 
-![Docusaurus Badge](https://img.shields.io/badge/docusaurus-3.1.1-green) [![github pages](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/pages.yml) [![Create and publish a Docker image](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/codespaces-image.yml/badge.svg?branch=main)](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/codespaces-image.yml)
+![Docusaurus Badge](https://img.shields.io/badge/docusaurus-3.7.0-green) ![GitHub contributors](https://img.shields.io/github/contributors/ubunchuu-truong-us/ubunchuu-truong-us.github.io) [![Star on GitHub](https://img.shields.io/github/stars/ubunchuu-truong-us/ubunchuu-truong-us.github.io.svg?style=social)](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/stargazers) [![github pages](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/pages.yml) [![Create and publish a Docker image](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/codespaces-image.yml/badge.svg?branch=main)](https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io/actions/workflows/codespaces-image.yml)
 
 <div style="display: flex; align-items: center;">
   <img src="static/img/favicon.ico" width="150" alt="logo">
@@ -21,7 +21,6 @@ To contribute to the blog, follow these steps:
 
 ```bash
 git checkout -b content/content-my-new-post
-cd ./docs/
 ```
 
 2. Install the dependencies by running:
@@ -38,5 +37,8 @@ yarn start
 
 4. Make your changes and test them locally.
 5. Open a pull request on your branch to submit your changes.
+
+> ![NOTE]
+> Pull requests will be automatically opened when you push your `content/` branch to the repository.
 
 > **🎉 Happy blogging!**

@@ -13,13 +13,6 @@
           "commands": [
             {
               "cwd": "${workspaceFolder}",
-              "name": "Node Install",
-              "color": "green",
-              "singleInstance": true,
-              "command": "yarn install 2> >(grep -v warning 1>&2)"
-            },
-            {
-              "cwd": "${workspaceFolder}",
               "name": "Development",
               "color": "cyan",
               "singleInstance": true,
