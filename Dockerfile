@@ -1,5 +1,9 @@
 # DO NOT CHANGE THE BASE IMAGE
-FROM mcr.microsoft.com/devcontainers/base:ubuntu-22.04
+FROM mcr.microsoft.com/devcontainers/base:ubuntu-24.04
+
+LABEL org.opencontainers.image.source https://github.com/ubunchuu-truong-us/ubunchuu-truong-us.github.io
+LABEL org.opencontainers.image.descripiton "Devcontainer image for Ubunchuu"
+
 # DO NOT CHANGE THE DEFAULT USER
 ARG DOCKERUSER=vscode
 
@@ -9,15 +13,19 @@ RUN \
   mkdir -p /home/${DOCKERUSER}/.local/bin /home/${DOCKERUSER}/.config && \
   chown -R ${DOCKERUSER} /home/${DOCKERUSER}/
 
-# Install Node.js 22
+WORKDIR /home/${DOCKERUSER}
+
 RUN \
-  curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
-  apt-get update && apt-get install --no-install-recommends -y nodejs git sudo vim && \
+  apt-get update && apt-get install --no-install-recommends -y curl git-core neovim && \
   apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+# Install mise as the language manager
+RUN curl https://mise.run | sh && \
+  echo 'eval "$(~/.local/bin/mise activate bash)"' >> ~/.bashrc
+
 # Install yarn
-RUN \
-  npm install -g yarn
+COPY mise.toml mise.toml
+RUN mise install
 
 USER ${DOCKERUSER}
 
