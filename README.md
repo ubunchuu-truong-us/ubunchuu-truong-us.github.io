@@ -21,7 +21,6 @@ To contribute to the blog, follow these steps:
 
 ```bash
 git checkout -b content/content-my-new-post
-cd ./docs/
 ```
 
 2. Install the dependencies by running:
@@ -38,5 +37,8 @@ yarn start
 
 4. Make your changes and test them locally.
 5. Open a pull request on your branch to submit your changes.
+
+> ![NOTE]
+> Pull requests will be automatically opened when you push your `content/` branch to the repository.
 
 > **🎉 Happy blogging!**
