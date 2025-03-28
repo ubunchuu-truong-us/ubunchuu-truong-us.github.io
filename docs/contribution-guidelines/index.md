@@ -6,6 +6,8 @@ sidebar-position: -1
 
 Ubunchuu rất vui khi bạn quyết định đóng góp cho blog của chúng mình. Để đảm bảo mọi người đều thuận tiện và dễ dàng khi đóng góp, chúng mình đã viết ra một số hướng dẫn dưới đây.
 
+<a id="before-you-start"></a>
+
 ## Trước khi bắt đầu
 
 Để đảm bảo mọi thay đổi sẽ được thảo luận và review kỹ lưỡng, chúng mình khuyến khích mọi người tạo một **GitHub Issue** trước khi bắt đầu viết bài. Điều này giúp chúng mình hiểu rõ hơn về nội dung bạn muốn viết và cũng giúp chúng mình xây dựng một cộng đồng đóng góp chặt chẽ hơn.
@@ -87,10 +89,14 @@ Khi nào sẵn sàng để review bài viết của bạn, hãy mark **Ready for
 
 ## Cách 2: Local Development
 
+:::important Điều cần làm trước tiên
+Cũng giống như Cách 1, bạn hãy check qua phần [Trước khi bắt đầu](#before-you-start) đã nhé.
+:::
+
 Để viết bài ở local, hãy make sure rằng máy tính của mọi người đã cài đặt những dependencies cần thiết như sau:
 - `node >= 22`: [Download Node.js](https://nodejs.org/en/download/)
 - `yarn >= 1.22`: `sudo npm install -g yarn`
-- Issue và branch được tạo như phần [Before You Start](#before-you-start).
+- Issue và branch được tạo như phần [Trước khi bắt đầu](#before-you-start).
 
 1. **Bước 1**: Clone repo của chúng mình về máy tính của bạn.
 
@@ -98,7 +104,7 @@ Khi nào sẵn sàng để review bài viết của bạn, hãy mark **Ready for
 git clone git@github.com:ubunchuu-truong-us/ubunchuu-truong-us.github.io.git
 ```
 
-2. **Bước 2**: Checkout qua nhánh đã tạo ở phần [Before You Start](#before-you-start).
+2. **Bước 2**: Checkout qua nhánh đã tạo ở phần [Trước khi bắt đầu](#before-you-start).
 
 ```bash
 git checkout content/<tên-bài-viết-của-bạn>
